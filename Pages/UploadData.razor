@@ -1,0 +1,34 @@
+@page "/counter"
+
+
+<h1>Upload your data</h1>
+
+<p></p>
+<p></p>
+
+@{ var list = new List<string>{"JSON", "XML"}; }
+<Dropdown TItem ="string" OnSelected="OnSelected" >
+    <InitialTip>Select File Type</InitialTip>
+    <ChildContent>
+        <DropdownListItem Item="@list[0]">JSON</DropdownListItem>
+        <DropdownListItem Item="@list[1]">XML</DropdownListItem>
+    </ChildContent>
+</Dropdown>
+
+<p> </p>
+
+<InputFile multiple />
+
+<p> </p>
+
+<button class="btn btn-primary">Upload Data</button>
+
+
+@code {
+
+    private string selectedFile;
+    private void OnSelected(string selection)
+    {
+        selectedFile = selection;
+    }
+}
