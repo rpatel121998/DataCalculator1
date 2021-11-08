@@ -90,6 +90,19 @@ using DataCalculator_New.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 10 "C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\Pages\Index.razor"
+      
+
+    public void onClick(){
+        NavigationManager.NavigateTo("/counter");
+    }
+    
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

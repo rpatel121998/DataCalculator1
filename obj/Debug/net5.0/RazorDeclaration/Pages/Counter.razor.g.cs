@@ -91,13 +91,10 @@ using DataCalculator_New.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\Pages\Counter.razor"
+#line 23 "C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\Pages\Counter.razor"
        
-    private int currentCount = 0;
-
-    private void IncrementCount()
+    private void OnSelected(string selection)
     {
-        currentCount++;
     }
 
 #line default

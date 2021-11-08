@@ -1,9 +1,16 @@
 @page "/"
+@inject NavigationManager NavigationManager
 
 <h1>Data Processing Calculator</h1>
 
-Welcome to our Data Processing Calculator.
+<p>This calculator will compare two data frameworks: PARADISE and AWS Glue to test what would suit your company your company and your needs.</p>
 
-This site is under construction. Please be patient...
+<button class="btn btn-primary" @onclick="onClick">Click to begin</button>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code{
+
+    public void onClick(){
+        NavigationManager.NavigateTo("/counter");
+    }
+    
+}

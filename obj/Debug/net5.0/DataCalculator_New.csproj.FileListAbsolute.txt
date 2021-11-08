@@ -56,3 +56,7 @@ C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.pdb
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.genruntimeconfig.cache
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.csproj.CopyComplete
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Shared\Dropdown.razor.g.cs
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Shared\DropdownListItem.razor.g.cs
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Shared\Dropdown.razor.g.cs
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Shared\DropdownListItem.razor.g.cs
