@@ -78,35 +78,35 @@
         }
       },
       {
-        "HashCode": -199886013,
+        "HashCode": 2107196665,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Pages.Counter",
+        "Name": "DataCalculator_New.Pages.UploadData",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "UploadData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Pages.Counter"
+          "Common.TypeName": "DataCalculator_New.Pages.UploadData"
         }
       },
       {
-        "HashCode": -1337310478,
+        "HashCode": 1201465787,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Pages.Counter",
+        "Name": "DataCalculator_New.Pages.UploadData",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DataCalculator_New.Pages.Counter"
+            "TagName": "DataCalculator_New.Pages.UploadData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Pages.Counter",
+          "Common.TypeName": "DataCalculator_New.Pages.UploadData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -197,182 +197,131 @@
         }
       },
       {
-        "HashCode": -11664365,
+        "HashCode": -399208320,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>",
+        "Name": "DataCalculator_New.Shared.MainLayout",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DropdownListItem"
+            "TagName": "MainLayout"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "TItem",
-            "TypeName": "System.Type",
-            "Documentation": "Specifies the type of the type parameter TItem for the DataCalculator_New.Shared.DropdownListItem<TItem> component.",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
             "Metadata": {
-              "Common.PropertyName": "TItem",
-              "Components.TypeParameter": "True",
-              "Components.TypeParameterIsCascading": "False"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Item",
-            "TypeName": "TItem",
-            "Metadata": {
-              "Common.PropertyName": "Item",
-              "Components.GenericTyped": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ChildContent",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<TItem>",
-            "Metadata": {
-              "Common.PropertyName": "ChildContent",
-              "Components.ChildContent": "True",
-              "Components.GenericTyped": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Context",
-            "TypeName": "System.String",
-            "Documentation": "Specifies the parameter name for all child content expressions.",
-            "Metadata": {
-              "Components.ChildContentParameterName": "True",
-              "Common.PropertyName": "Context"
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>",
-          "Components.GenericTyped": "True"
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout"
         }
       },
       {
-        "HashCode": -838097734,
+        "HashCode": -821768346,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>",
+        "Name": "DataCalculator_New.Shared.MainLayout",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DataCalculator_New.Shared.DropdownListItem"
+            "TagName": "DataCalculator_New.Shared.MainLayout"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "TItem",
-            "TypeName": "System.Type",
-            "Documentation": "Specifies the type of the type parameter TItem for the DataCalculator_New.Shared.DropdownListItem<TItem> component.",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
             "Metadata": {
-              "Common.PropertyName": "TItem",
-              "Components.TypeParameter": "True",
-              "Components.TypeParameterIsCascading": "False"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Item",
-            "TypeName": "TItem",
-            "Metadata": {
-              "Common.PropertyName": "Item",
-              "Components.GenericTyped": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ChildContent",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<TItem>",
-            "Metadata": {
-              "Common.PropertyName": "ChildContent",
-              "Components.ChildContent": "True",
-              "Components.GenericTyped": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Context",
-            "TypeName": "System.String",
-            "Documentation": "Specifies the parameter name for all child content expressions.",
-            "Metadata": {
-              "Components.ChildContentParameterName": "True",
-              "Common.PropertyName": "Context"
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>",
-          "Components.GenericTyped": "True",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1719885636,
+        "HashCode": 2123358617,
         "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
+        "Name": "DataCalculator_New.Shared.MainLayout.Body",
         "AssemblyName": "DataCalculator_New",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChildContent",
-            "ParentTag": "DropdownListItem"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.ChildContent",
-            "Name": "Context",
-            "TypeName": "System.String",
-            "Documentation": "Specifies the parameter name for the 'ChildContent' child content expression.",
-            "Metadata": {
-              "Components.ChildContentParameterName": "True",
-              "Common.PropertyName": "Context"
-            }
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent"
         }
       },
       {
-        "HashCode": 1697730903,
+        "HashCode": -1410067334,
         "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
+        "Name": "DataCalculator_New.Shared.MainLayout.Body",
         "AssemblyName": "DataCalculator_New",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChildContent",
-            "ParentTag": "DataCalculator_New.Shared.DropdownListItem"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.ChildContent",
-            "Name": "Context",
-            "TypeName": "System.String",
-            "Documentation": "Specifies the parameter name for the 'ChildContent' child content expression.",
-            "Metadata": {
-              "Components.ChildContentParameterName": "True",
-              "Common.PropertyName": "Context"
-            }
+            "TagName": "Body",
+            "ParentTag": "DataCalculator_New.Shared.MainLayout"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1092944827,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.NavMenu",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1168089079,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.NavMenu",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DataCalculator_New.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -568,131 +517,182 @@
         }
       },
       {
-        "HashCode": -399208320,
+        "HashCode": -11664365,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.MainLayout",
+        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MainLayout"
+            "TagName": "DropdownListItem"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "TItem",
+            "TypeName": "System.Type",
+            "Documentation": "Specifies the type of the type parameter TItem for the DataCalculator_New.Shared.DropdownListItem<TItem> component.",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "TItem",
+              "Components.TypeParameter": "True",
+              "Components.TypeParameterIsCascading": "False"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Item",
+            "TypeName": "TItem",
+            "Metadata": {
+              "Common.PropertyName": "Item",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<TItem>",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for all child content expressions.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout"
+          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>",
+          "Components.GenericTyped": "True"
         }
       },
       {
-        "HashCode": -821768346,
+        "HashCode": -838097734,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.MainLayout",
+        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DataCalculator_New.Shared.MainLayout"
+            "TagName": "DataCalculator_New.Shared.DropdownListItem"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "TItem",
+            "TypeName": "System.Type",
+            "Documentation": "Specifies the type of the type parameter TItem for the DataCalculator_New.Shared.DropdownListItem<TItem> component.",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "TItem",
+              "Components.TypeParameter": "True",
+              "Components.TypeParameterIsCascading": "False"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Item",
+            "TypeName": "TItem",
+            "Metadata": {
+              "Common.PropertyName": "Item",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<TItem>",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for all child content expressions.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout",
+          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>",
+          "Components.GenericTyped": "True",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 2123358617,
+        "HashCode": -1719885636,
         "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.MainLayout.Body",
+        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
         "AssemblyName": "DataCalculator_New",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "MainLayout"
+            "TagName": "ChildContent",
+            "ParentTag": "DropdownListItem"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.ChildContent",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for the 'ChildContent' child content expression.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
+          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent"
         }
       },
       {
-        "HashCode": -1410067334,
+        "HashCode": 1697730903,
         "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.MainLayout.Body",
+        "Name": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
         "AssemblyName": "DataCalculator_New",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "DataCalculator_New.Shared.MainLayout"
+            "TagName": "ChildContent",
+            "ParentTag": "DataCalculator_New.Shared.DropdownListItem"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.ChildContent",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for the 'ChildContent' child content expression.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
+          "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1092944827,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.NavMenu",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -1168089079,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.NavMenu",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DataCalculator_New.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16329,8 +16329,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\aj_ch\\Documents\\College\\CSCI 4950\\DataCaculatorPrototype\\DataCalculator1\\DataCalculator_New\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
+      "FilePath": "c:\\Users\\aj_ch\\Documents\\College\\CSCI 4950\\DataCaculatorPrototype\\DataCalculator1\\DataCalculator_New\\Pages\\UploadData.razor",
+      "TargetPath": "Pages\\UploadData.razor",
       "FileKind": "component"
     },
     {

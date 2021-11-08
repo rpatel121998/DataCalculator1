@@ -18,7 +18,6 @@ C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.RazorComponent.input.cache
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
-C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
@@ -31,7 +30,6 @@ C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.TagHelpers.output.cache
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\DataCalculator_New.RazorCoreGenerate.cache
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\App.razor.g.cs
-C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
@@ -60,3 +58,5 @@ C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Shared\DropdownListItem.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Shared\Dropdown.razor.g.cs
 C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Shared\DropdownListItem.razor.g.cs
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\RazorDeclaration\Pages\UploadData.razor.g.cs
+C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\Razor\Pages\UploadData.razor.g.cs
