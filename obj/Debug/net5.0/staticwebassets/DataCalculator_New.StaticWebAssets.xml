@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\aj_ch\.nuget\packages\blazorinputfile\0.2.0\build\..\staticwebassets\" />
   <ContentRoot BasePath="/" Path="C:\Users\aj_ch\Documents\College\CSCI 4950\DataCaculatorPrototype\DataCalculator1\DataCalculator_New\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>

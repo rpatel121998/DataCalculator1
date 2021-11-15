@@ -39,6 +39,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.4.4, )"
+            },
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

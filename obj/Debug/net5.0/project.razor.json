@@ -45,35 +45,35 @@
         }
       },
       {
-        "HashCode": 736817475,
+        "HashCode": 824075857,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Pages.FetchData",
+        "Name": "DataCalculator_New.Pages.QueryData",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "QueryData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Pages.FetchData"
+          "Common.TypeName": "DataCalculator_New.Pages.QueryData"
         }
       },
       {
-        "HashCode": -1847063525,
+        "HashCode": -518815486,
         "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Pages.FetchData",
+        "Name": "DataCalculator_New.Pages.QueryData",
         "AssemblyName": "DataCalculator_New",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DataCalculator_New.Pages.FetchData"
+            "TagName": "DataCalculator_New.Pages.QueryData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Pages.FetchData",
+          "Common.TypeName": "DataCalculator_New.Pages.QueryData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -140,188 +140,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "DataCalculator_New.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 2110859971,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.SurveyPrompt",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -1470149397,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.SurveyPrompt",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DataCalculator_New.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -399208320,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.MainLayout",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MainLayout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout"
-        }
-      },
-      {
-        "HashCode": -821768346,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.MainLayout",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DataCalculator_New.Shared.MainLayout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 2123358617,
-        "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.MainLayout.Body",
-        "AssemblyName": "DataCalculator_New",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "MainLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
-        }
-      },
-      {
-        "HashCode": -1410067334,
-        "Kind": "Components.ChildContent",
-        "Name": "DataCalculator_New.Shared.MainLayout.Body",
-        "AssemblyName": "DataCalculator_New",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "DataCalculator_New.Shared.MainLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1092944827,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.NavMenu",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -1168089079,
-        "Kind": "Components.Component",
-        "Name": "DataCalculator_New.Shared.NavMenu",
-        "AssemblyName": "DataCalculator_New",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DataCalculator_New.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DataCalculator_New.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -693,6 +511,291 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "DataCalculator_New.Shared.DropdownListItem<TItem>.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2110859971,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.SurveyPrompt",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -1470149397,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.SurveyPrompt",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DataCalculator_New.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -399208320,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.MainLayout",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout"
+        }
+      },
+      {
+        "HashCode": -821768346,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.MainLayout",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DataCalculator_New.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2123358617,
+        "Kind": "Components.ChildContent",
+        "Name": "DataCalculator_New.Shared.MainLayout.Body",
+        "AssemblyName": "DataCalculator_New",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1410067334,
+        "Kind": "Components.ChildContent",
+        "Name": "DataCalculator_New.Shared.MainLayout.Body",
+        "AssemblyName": "DataCalculator_New",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "DataCalculator_New.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "DataCalculator_New.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1092944827,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.NavMenu",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1168089079,
+        "Kind": "Components.Component",
+        "Name": "DataCalculator_New.Shared.NavMenu",
+        "AssemblyName": "DataCalculator_New",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DataCalculator_New.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DataCalculator_New.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1306498366,
+        "Kind": "Components.Component",
+        "Name": "BlazorInputFile.InputFile",
+        "AssemblyName": "BlazorInputFile",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "InputFile"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnmatchedParameters",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "UnmatchedParameters"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnChange",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<BlazorInputFile.IFileListEntry[]>",
+            "Metadata": {
+              "Common.PropertyName": "OnChange",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxMessageSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxMessageSize"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxBufferSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxBufferSize"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorInputFile.InputFile"
+        }
+      },
+      {
+        "HashCode": -1970665694,
+        "Kind": "Components.Component",
+        "Name": "BlazorInputFile.InputFile",
+        "AssemblyName": "BlazorInputFile",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorInputFile.InputFile"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnmatchedParameters",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "UnmatchedParameters"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnChange",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<BlazorInputFile.IFileListEntry[]>",
+            "Metadata": {
+              "Common.PropertyName": "OnChange",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxMessageSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxMessageSize"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxBufferSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxBufferSize"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorInputFile.InputFile",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16334,8 +16437,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\aj_ch\\Documents\\College\\CSCI 4950\\DataCaculatorPrototype\\DataCalculator1\\DataCalculator_New\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
+      "FilePath": "c:\\Users\\aj_ch\\Documents\\College\\CSCI 4950\\DataCaculatorPrototype\\DataCalculator1\\DataCalculator_New\\Pages\\QueryData.razor",
+      "TargetPath": "Pages\\QueryData.razor",
       "FileKind": "component"
     },
     {
