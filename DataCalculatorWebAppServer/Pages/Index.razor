@@ -1,0 +1,16 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h1>Data Processing Calculator</h1>
+
+<p>This calculator will compare two data frameworks: PARADISE and AWS Glue to test what would suit your company your company and your needs.</p>
+
+<button class="btn btn-primary" @onclick="onClick">Click to begin</button>
+
+@code{
+
+    public void onClick(){
+        NavigationManager.NavigateTo("/counter");
+    }
+    
+}

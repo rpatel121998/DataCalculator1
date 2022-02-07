@@ -1,0 +1,50 @@
+﻿@page "/counter"
+@using BlazorInputFile
+@using Models
+@using Data
+@using Services
+
+@inject DataCalculatorDbContext _context
+@inject IFileHandler _fileHandler
+
+<h3>Upload Data</h3>
+<div class="sendFileForm">
+      <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
+
+        <div class="form-group">
+            <label for="File">File</label>
+            <BlazorInputFile.InputFile id="File" class="form-control" OnChange="@HandleFileUpload" />
+        </div>
+        <button class="btn btn-primary" type="submit">Send file</button>
+    </EditForm>
+    <p>@message</p>
+</div>
+
+
+@code {
+    private FileSendData data = new FileSendData();
+
+    private string message;
+
+    private async void HandleValidSubmit()
+    {
+        _context.FileSendData.Add(data);
+        await _context.SaveChangesAsync();
+        await _fileHandler.UploadFileAsync(data);
+        message = "File is uploaded locally"; // Message substitution
+        data = new FileSendData();
+        base.StateHasChanged();
+
+    }
+
+    private void HandleFileUpload(IFileListEntry[] file)
+    {
+        data.File = file.FirstOrDefault();
+        data.Type = data.File.Type;
+        data.FileName = data.File.Name;
+        data.Date = data.File.LastModified;
+        data.Size = Convert.ToInt32(data.File.Size);
+    }
+
+
+}

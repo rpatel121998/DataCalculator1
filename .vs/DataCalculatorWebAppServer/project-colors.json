@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3ccb818a-0b1c-4857-991c-910c84857154": {
+      "ProjectGuid": "3ccb818a-0b1c-4857-991c-910c84857154",
+      "DisplayName": "DataCalculatorWebAppServer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
