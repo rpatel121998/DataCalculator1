@@ -1,12 +1,14 @@
-﻿@page "/counter"
+﻿@* This is the Upload Data page -- still need to modify the UI*@
+@page "/counter"
 @using BlazorInputFile
 @using Models
 @using Data
 @using Services
 
-@inject DataCalculatorDbContext _context
+@inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 
+@* The form *@
 <h3>Upload Data</h3>
 <div class="sendFileForm">
       <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
@@ -17,21 +19,19 @@
         </div>
         <button class="btn btn-primary" type="submit">Send file</button>
     </EditForm>
-    <p>@message</p>
+    <p>@message2</p>
 </div>
 
 
 @code {
     private FileSendData data = new FileSendData();
 
-    private string message;
+    private string message2; 
 
     private async void HandleValidSubmit()
     {
-        _context.FileSendData.Add(data);
-        await _context.SaveChangesAsync();
         await _fileHandler.UploadFileAsync(data);
-        message = "File is uploaded locally"; // Message substitution
+        message2 = "File is now uploaded to S3";
         data = new FileSendData();
         base.StateHasChanged();
 
@@ -40,10 +40,10 @@
     private void HandleFileUpload(IFileListEntry[] file)
     {
         data.File = file.FirstOrDefault();
-        data.Type = data.File.Type;
-        data.FileName = data.File.Name;
-        data.Date = data.File.LastModified;
-        data.Size = Convert.ToInt32(data.File.Size);
+        //data.Type = data.File.Type;
+        //data.FileName = data.File.Name;
+        //data.Date = data.File.LastModified;
+        //data.Size = Convert.ToInt32(data.File.Size);
     }
 
 

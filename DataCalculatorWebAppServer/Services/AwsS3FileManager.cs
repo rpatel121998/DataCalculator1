@@ -9,7 +9,8 @@ using DataCalculatorWebAppServer.Models;
 
 namespace DataCalculatorWebAppServer.Services
 {
-    public class AwsS3FileManager : IAwsS3FileManager
+    // The actual controller where the S3 upload happens
+    public class AwsS3FileManager : IAwsS3FileManager 
     {
         private readonly IAmazonS3 _client;
         private readonly string _bucket;
@@ -25,7 +26,7 @@ namespace DataCalculatorWebAppServer.Services
             var filestream = new MemoryStream();
             await file.CopyToAsync(filestream);
 
-            var s3FileName = $"{DateTime.Now.Ticks}-{fileName}";
+            var s3FileName = $"{fileName}";
 
             var transferRequest = new TransferUtilityUploadRequest()
             {

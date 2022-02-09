@@ -10,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddDbContext<DataCalculatorDbContext>(options =>
 {
@@ -19,6 +18,7 @@ builder.Services.AddDbContext<DataCalculatorDbContext>(options =>
 
 builder.Services.AddAWSService<IAmazonS3>();
 builder.Services.AddScoped<IAwsS3FileManager, AwsS3FileManager>();
+builder.Services.AddScoped<IFileHandler, FileHandler>();
 
 var app = builder.Build();
 

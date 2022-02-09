@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataCalculatorWebAppServer.Models
 {
-    public class FileSendData
+    public class FileSendData // File Object. Helpful for Metadata
     {
         public int Id { get; set; } // Label
 

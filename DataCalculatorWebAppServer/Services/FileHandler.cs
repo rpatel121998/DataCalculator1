@@ -18,15 +18,7 @@ namespace DataCalculatorWebAppServer.Services
 
         public async Task UploadFileAsync(FileSendData fileSendData)
         {
-            _context.FileSendData.Add(fileSendData);
-
             var s3fileName = await _s3FileManager.UploadFileAsync(fileSendData.File.Name, fileSendData.File.Data);
-
-            _context.FileStorageData.Add(new FileStorageData
-            {
-                FileSendDataId = fileSendData.Id,
-                FileUri = s3fileName
-            });
             await _context.SaveChangesAsync();
         }
     }

@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using DataCalculatorWebAppServer.Models;
 
-namespace DataCalculatorWebAppServer.Data
+// The local database is not necessary for now because we could now upload to AWS
+namespace DataCalculatorWebAppServer.Data 
 {
     public class DataCalculatorDbContext : DbContext
     {
@@ -11,7 +12,6 @@ namespace DataCalculatorWebAppServer.Data
 
         }
 
-        public DbSet<FileSendData> FileSendData { get; set; }
-        public DbSet<FileStorageData> FileStorageData { get; set; }
+        public DbSet<FileSendData> FileSendData { get; set; } 
     }
 }
