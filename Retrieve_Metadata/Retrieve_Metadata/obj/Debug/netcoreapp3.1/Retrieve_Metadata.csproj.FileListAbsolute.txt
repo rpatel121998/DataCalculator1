@@ -1,0 +1,13 @@
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/bin/Debug/netcoreapp3.1/Retrieve_Metadata.deps.json
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/bin/Debug/netcoreapp3.1/Retrieve_Metadata.runtimeconfig.json
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/bin/Debug/netcoreapp3.1/Retrieve_Metadata.runtimeconfig.dev.json
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/bin/Debug/netcoreapp3.1/Retrieve_Metadata.dll
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/bin/Debug/netcoreapp3.1/Retrieve_Metadata.pdb
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.csproj.AssemblyReference.cache
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.GeneratedMSBuildEditorConfig.editorconfig
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.AssemblyInfoInputs.cache
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.AssemblyInfo.cs
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.csproj.CoreCompileInputs.cache
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.dll
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.pdb
+/Users/henryholt/Projects/Retrieve_Metadata/Retrieve_Metadata/obj/Debug/netcoreapp3.1/Retrieve_Metadata.genruntimeconfig.cache
