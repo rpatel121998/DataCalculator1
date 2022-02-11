@@ -12,6 +12,7 @@ namespace DataCalculatorWebAppServer.Data
 
         }
 
-        public DbSet<FileSendData> FileSendData { get; set; } 
+        public DbSet<FileSendData> FileSendData { get; set; }
+        public DbSet<FileStorageData> FileStorageData { get; set; }
     }
 }
