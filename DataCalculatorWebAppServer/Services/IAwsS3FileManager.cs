@@ -7,7 +7,7 @@ namespace DataCalculatorWebAppServer.Services
     public interface IAwsS3FileManager
     {
         Task<string> UploadFileAsync(string fileName, Stream file);
+        Task<TransferFile> DownloadFileAsync(string fileName);
 
-       
     }
 }

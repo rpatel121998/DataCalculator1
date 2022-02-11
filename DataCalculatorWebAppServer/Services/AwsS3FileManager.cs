@@ -42,5 +42,33 @@ namespace DataCalculatorWebAppServer.Services
 
             return s3FileName;
         }
+        public async Task<TransferFile> DownloadFileAsync(string fileName)
+        {
+            var request = new GetObjectRequest
+            {
+                BucketName = _bucket,
+                Key = fileName
+            };
+
+            using (var objectResponse = await _client.GetObjectAsync(request))
+            {
+                if (objectResponse.HttpStatusCode == HttpStatusCode.NotFound)
+                {
+                    throw new Exception("Could not find file.");
+                }
+
+                using (var responseStream = objectResponse.ResponseStream)
+                using (var reader = new StreamReader(responseStream))
+                {
+                    var result = new MemoryStream();
+                    responseStream.CopyTo(result);
+                    return new TransferFile
+                    {
+                        Name = fileName,
+                        Content = result.ToArray()
+                    };
+                }
+            }
+        }
     }
 }
