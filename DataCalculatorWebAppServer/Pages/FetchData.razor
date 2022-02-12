@@ -7,5 +7,38 @@
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
+<h1>Download file for query</h1>
+<button @onchange = "DownloadFile">Click to begin</button>
 
-This page is under construction.
+@code{
+    private async void DownloadFile()
+    {
+        var file = await _fileHandler.DownloadFileAsync("nvdcve2019.json");
+        Console.WriteLine("hello");
+        SaveData(file);
+
+    }
+    protected bool SaveData(TransferFile byteFile)
+    {
+        BinaryWriter Writer = null;
+        string Name = @"C:.\Downloads\";
+
+        try
+        {
+            // Create a new stream to write to the file
+            Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));
+
+            // Writer raw data                
+            Writer.Write(byteFile.Content);
+            Writer.Flush();
+            Writer.Close();
+        }
+        catch 
+        {
+            return false;
+        }
+
+        return true;
+    }
+    
+}
