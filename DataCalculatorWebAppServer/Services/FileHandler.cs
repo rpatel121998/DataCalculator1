@@ -1,4 +1,9 @@
-﻿using DataCalculatorWebAppServer.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using DataCalculatorWebAppServer.Data;
 using DataCalculatorWebAppServer.Models;
 
 namespace DataCalculatorWebAppServer.Services
@@ -25,9 +30,7 @@ namespace DataCalculatorWebAppServer.Services
         public async Task<TransferFile> DownloadFileAsync(string fileName)
         {
             var dbFileData = await _context
-                .FileStorageData
-                    .Include(f => f.FileSendData)
-                .SingleOrDefaultAsync(f => f.FileName == fileName);
+                .FileStorageData.Include(f => f.FileSendData).SingleOrDefaultAsync(f => f.FileName == fileName);
 
             if (dbFileData == null)
             {
