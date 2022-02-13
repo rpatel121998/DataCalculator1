@@ -8,13 +8,13 @@
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 <h1>Download file for query</h1>
-<button @onchange = "DownloadFile">Click to begin</button>
+<button @onclick = "@DownloadFile">Click to begin</button>
 
 @code{
-    private async void DownloadFile()
+    private async Task DownloadFile()
     {
-        var file = await _fileHandler.DownloadFileAsync("nvdcve2019.json");
         Console.WriteLine("hello");
+        var file = await _fileHandler.DownloadFileAsync("nvdcve2019.json");
         SaveData(file);
 
     }

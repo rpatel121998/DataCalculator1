@@ -146,3 +146,4 @@ C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\obj\Debug
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\obj\Debug\net6.0\ref\DataCalculatorWebAppServer.dll
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\obj\Debug\net6.0\DataCalculatorWebAppServer.pdb
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\obj\Debug\net6.0\DataCalculatorWebAppServer.genruntimeconfig.cache
+C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve2019.json
