@@ -10,12 +10,16 @@
 <h1>Download file for query</h1>
 <button @onclick = "@DownloadFile">Click to begin</button>
 
+
 @code{
-    private async Task DownloadFile()
+    private async Task  DownloadFile(string[] fileList)
     {
-        Console.WriteLine("hello");
-        var file = await _fileHandler.DownloadFileAsync("nvdcve2019.json");
-        SaveData(file);
+        foreach(var fiName in fileList)
+        {
+            var file = await _fileHandler.DownloadFileAsync(fiName);
+            SaveData(file);
+        }
+        
 
     }
     protected bool SaveData(TransferFile byteFile)

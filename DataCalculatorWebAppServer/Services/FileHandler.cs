@@ -29,20 +29,7 @@ namespace DataCalculatorWebAppServer.Services
 
         public async Task<TransferFile> DownloadFileAsync(string fileName)
         {
-            /*var dbFileData = await _context
-                .FileStorageData.Include(f => f.FileSendData).SingleOrDefaultAsync(f => f.FileName == fileName);
-
-            if (dbFileData == null)
-            {
-                return new TransferFile();
-            } */
-
             var file = await _s3FileManager.DownloadFileAsync(fileName);
-
-            //_context.FileSendData.Remove(dbFileData.FileSendData);
-            //_context.FileStorageData.Remove(dbFileData);
-            //await _context.SaveChangesAsync();
-
             return file;
         }
     }
