@@ -67,3 +67,7 @@ a, .btn-link {
     margin: 5%;
     width: 25%;
 }
+
+input[type='file']{
+    color: transparent;
+}

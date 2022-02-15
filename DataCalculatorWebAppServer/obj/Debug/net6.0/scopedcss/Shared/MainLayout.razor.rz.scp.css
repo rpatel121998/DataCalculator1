@@ -68,3 +68,7 @@ main[b-huanuhoab5] {
         padding-right: 1.5rem !important;
     }
 }
+
+input[type='file'][b-huanuhoab5] {
+    color: transparent;
+}
