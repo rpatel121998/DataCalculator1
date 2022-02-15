@@ -4,8 +4,10 @@
 @using Models
 @using Data
 @using Services
+@using System.Diagnostics
 
 @inject DataCalculatorDbContext _context 
+@inject MetaDataDbContext _md_context
 @inject IFileHandler _fileHandler
 
 @* The form *@
@@ -15,35 +17,93 @@
 
         <div class="form-group">
             <label for="File">File</label>
-            <BlazorInputFile.InputFile id="File" class="form-control" OnChange="@HandleFileUpload" />
+            <BlazorInputFile.InputFile id="File" class="form-control" accept=".json" OnChange="@HandleFileUpload" multiple />
+            <strong>
+                file(s) selected: @fileName
+            </strong>
         </div>
         <button class="btn btn-primary" type="submit">Send file</button>
     </EditForm>
+    <p>@message</p>
     <p>@message2</p>
+    <p>@UploadTimeMessage</p>
 </div>
 
 
 @code {
-    private FileSendData data = new FileSendData();
+    private List<FileSendData> data = new List<FileSendData>(); 
 
-    private string message2; 
+    private string message;
+
+    private string message2;
+
+    private string fileName;
+
+    private string UploadTimeMessage;
+
+    private string timeToUpload;
 
     private async void HandleValidSubmit()
     {
-        await _fileHandler.UploadFileAsync(data);
-        message2 = "File is now uploaded to S3";
-        data = new FileSendData();
-        base.StateHasChanged();
+        if (data.Count != 0)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+
+            message = "Uploading to Amazon S3";
+
+            stopwatch.Start();
+            foreach (FileSendData datum in data)
+            {
+                _md_context.UploadMetaData(datum);
+                await _fileHandler.UploadFileAsync(datum);
+            }
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+            message = "All files are now uploaded to S3";
+            message2 = "All Metadata of the all files are now uploaded to S3";
+
+            timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
+            UploadTimeMessage = $"Time to upload is: {timeToUpload} seconds";
+            base.StateHasChanged();
+
+        }
+
+        else
+        {
+            message = "You did not upload anything. Please try again.";
+        }
+
 
     }
 
     private void HandleFileUpload(IFileListEntry[] file)
     {
-        data.File = file.FirstOrDefault();
-        //data.Type = data.File.Type;
-        //data.FileName = data.File.Name;
-        //data.Date = data.File.LastModified;
-        //data.Size = Convert.ToInt32(data.File.Size);
+        Random rnd = new Random();
+
+        for (int i = 0; i < file.Length; i++)
+        {
+            data.Add(new FileSendData());
+
+            if (file[i] != null)
+            {
+                data[i].File = file[i];
+                data[i].Id = rnd.Next(201);        
+                fileName = data[i].File.Name;
+                data[i].FileName = fileName;
+                data[i].Type = data[i].File.Type;
+                data[i].Size = data[i].File.Size;
+                data[i].Date = data[i].File.LastModified;
+                data[i].Year = data[i].GetYear();
+                data[i].Path = data[i].File.RelativePath;
+            }
+
+            else
+            {
+                message = "Error: A Null file exists";
+            }
+        }
+       
     }
 
 
