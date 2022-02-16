@@ -8,29 +8,30 @@
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 <h1>Download file for query</h1>
-
-@*<form action="/action_page.php">
-  <label for="yearstart">Choose a start year:</label>
-  <select id="yearstart" name="years">
-    <option value="2016">2016</option>
-    <option value="2017">2017</option>
-    <option value="2018">2018</option>
-    <option value="2019">2019</option>
-    <option value="2020">2020</option>
-    <option value="2021">2021</option>
-  </select>
-  <input type="submit">
-</form>*@
-<button @onclick = "@DownloadFile" >Click to begin</button>
+<p>Enter starting year</p>
+<input @bind="startDate">Enter starting year</input>
+<p>Enter end year</p>
+<input @bind="endDate">Enter final year</input>
+<button @onclick = "() => MetaDataQuery(startDate,endDate)" >Click to begin</button>
 
 
 @code{
-    private async Task DownloadFile(string[]fileList)
+    string startDate = "";
+    string endDate = "";
+
+    private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
+    {
+        Console.WriteLine(startingQueryDate + endingQueryDate);        
+        string[] fileNames = new string[1];// Query MongoDb for all file names from start to end year and store in fileNames
+        DownloadFile(fileNames);
+    }
+
+    private async Task DownloadFile(string[] fileList)
     {
         foreach(var fiName in fileList)
         {
             var file = await _fileHandler.DownloadFileAsync(fiName);
-            SaveData(file);
+           SaveData(file);
         }
     }
 
@@ -41,10 +42,7 @@
 
         try
         {
-            // Create a new stream to write to the file
-            Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));
-
-            // Writer raw data                
+            Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));              
             Writer.Write(byteFile.Content);
             Writer.Flush();
             Writer.Close();

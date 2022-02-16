@@ -69,6 +69,10 @@ main[b-huanuhoab5] {
         padding-right: 1.5rem !important;
     }
 }
+
+input[type='file'][b-huanuhoab5] {
+    color: transparent;
+}
 /* _content/DataCalculatorWebAppServer/Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-ike4enp222] {
     background-color: rgba(255, 255, 255, 0.1);

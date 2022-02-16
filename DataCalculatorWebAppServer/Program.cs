@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Amazon.S3;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,9 @@ builder.Services.AddDbContext<DataCalculatorDbContext>(options =>
 builder.Services.AddAWSService<IAmazonS3>();
 builder.Services.AddScoped<IAwsS3FileManager, AwsS3FileManager>();
 builder.Services.AddScoped<IFileHandler, FileHandler>();
+builder.Services.AddScoped<MetaDataDbContext>();
+
+//var client = new MongoClient("mongodb+srv://rpatel1:Yash2001@cluster0.fbfor.mongodb.net/NDVData?retryWrites=true&w=majority");
 
 var app = builder.Build();
 
