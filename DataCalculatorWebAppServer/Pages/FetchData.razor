@@ -8,20 +8,32 @@
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 <h1>Download file for query</h1>
-<button @onclick = "@DownloadFile">Click to begin</button>
+
+@*<form action="/action_page.php">
+  <label for="yearstart">Choose a start year:</label>
+  <select id="yearstart" name="years">
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+  </select>
+  <input type="submit">
+</form>*@
+<button @onclick = "@DownloadFile" >Click to begin</button>
 
 
 @code{
-    private async Task  DownloadFile(string[] fileList)
+    private async Task DownloadFile(string[]fileList)
     {
         foreach(var fiName in fileList)
         {
             var file = await _fileHandler.DownloadFileAsync(fiName);
             SaveData(file);
         }
-        
-
     }
+
     protected bool SaveData(TransferFile byteFile)
     {
         BinaryWriter Writer = null;
