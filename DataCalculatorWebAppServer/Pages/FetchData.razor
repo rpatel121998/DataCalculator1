@@ -22,7 +22,7 @@
     private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
     {
         Console.WriteLine(startingQueryDate + endingQueryDate);        
-        string[] fileNames = new string[1];// Query MongoDb for all file names from start to end year and store in fileNames
+        string[] fileNames = {"nvdcve-1.1-2019.json", "nvdcve-1.1-2021.json"};// Query MongoDb for all file names from start to end year and store in fileNames
         DownloadFile(fileNames);
     }
 
