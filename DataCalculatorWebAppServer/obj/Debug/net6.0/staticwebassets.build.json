@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I0GCXTqztgbJgyQjMF4I2N4oXeVQlsdWcccGSKES5hs=",
+  "Hash": "+q7aDmugTGxlSVEdjMKTNl+Y+tM1XIx31aICZqNELYk=",
   "Source": "DataCalculatorWebAppServer",
   "BasePath": "_content/DataCalculatorWebAppServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "DataCalculatorWebAppServer\\wwwroot",
       "Source": "DataCalculatorWebAppServer",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js",
       "SourceId": "BlazorInputFile",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\",
       "BasePath": "_content/BlazorInputFile",
       "RelativePath": "inputfile.js",
       "AssetKind": "All",
@@ -31,13 +31,115 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\background.png",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\scripts.js",
+      "SourceId": "C1.Blazor.Chart",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Chart",
+      "RelativePath": "scripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\scripts.js"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\scripts.js.map",
+      "SourceId": "C1.Blazor.Chart",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Chart",
+      "RelativePath": "scripts.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\scripts.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\styles.css",
+      "SourceId": "C1.Blazor.Chart",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Chart",
+      "RelativePath": "styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.chart\\6.0.20213.154\\staticwebassets\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\activity_indicator.gif",
+      "SourceId": "C1.Blazor.Core",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Core",
+      "RelativePath": "activity_indicator.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\activity_indicator.gif"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\scripts.js",
+      "SourceId": "C1.Blazor.Core",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Core",
+      "RelativePath": "scripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\scripts.js"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\styles.css",
+      "SourceId": "C1.Blazor.Core",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\",
+      "BasePath": "_content/C1.Blazor.Core",
+      "RelativePath": "styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\c1.blazor.core\\6.0.20213.154\\staticwebassets\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\background.png",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "background.png",
       "AssetKind": "All",
@@ -48,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\background.png"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\background.png"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUpload.png",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUpload.png",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "BlazorFileUpload.png",
       "AssetKind": "All",
@@ -65,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUpload.png"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUpload.png"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUploadIcon.ico",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUploadIcon.ico",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "BlazorFileUploadIcon.ico",
       "AssetKind": "All",
@@ -82,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUploadIcon.ico"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\BlazorFileUploadIcon.ico"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\exampleJsInterop.js",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\exampleJsInterop.js",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "exampleJsInterop.js",
       "AssetKind": "All",
@@ -99,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\exampleJsInterop.js"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\exampleJsInterop.js"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButton.jpg",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButton.jpg",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "Images/Buttons/BlackButton.jpg",
       "AssetKind": "All",
@@ -116,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButton.jpg"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButton.jpg"
     },
     {
-      "Identity": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg",
+      "Identity": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "Images/Buttons/BlackButtonWide.jpg",
       "AssetKind": "All",
@@ -133,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\DataCalculatorWebAppServer.styles.css",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\DataCalculatorWebAppServer.styles.css",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "DataCalculatorWebAppServer.styles.css",
       "AssetKind": "All",
@@ -150,13 +252,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\DataCalculatorWebAppServer.styles.css"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\DataCalculatorWebAppServer.styles.css"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DataCalculatorWebAppServer.bundle.scp.css",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DataCalculatorWebAppServer.bundle.scp.css",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "DataCalculatorWebAppServer.bundle.scp.css",
       "AssetKind": "All",
@@ -167,13 +269,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DataCalculatorWebAppServer.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DataCalculatorWebAppServer.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -187,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -204,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -221,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -238,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -255,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -272,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -289,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -306,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -323,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -340,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -357,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\css\\site.css",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -374,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\favicon.ico",
       "SourceId": "DataCalculatorWebAppServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\aj_ch\\Documents\\College\\CSCI 4712\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer\\wwwroot\\",
       "BasePath": "_content/DataCalculatorWebAppServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
