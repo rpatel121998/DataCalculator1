@@ -4,20 +4,58 @@
 @using Models
 @using Data
 @using Services
+@using C1.Chart
+@using C1.Blazor.Chart
+@using Parser
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
+
 <h1>Download file for query</h1>
 <p>Enter starting year</p>
 <input @bind="startDate">Enter starting year</input>
 <p>Enter end year</p>
 <input @bind="endDate">Enter final year</input>
 <button @onclick = "() => MetaDataQuery(startDate,endDate)" >Click to begin</button>
-
+<button @onclick = "() => ParseData(path)" >Query Data</button>
+<p>@message</p>
+@if (state == 1)
+{
+    <p>@message</p>
+    <FlexChart Class="chart" ChartType="ChartType.Column"
+    HeaderContent="Top Vulnerabilities in 2019" HeaderStyle="font-size:24px"
+    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
+    BindingX="name" ItemsSource="display">
+        <SeriesCollection>
+            <Series Name="count" Binding="count" />
+        </SeriesCollection>
+        <Label>
+            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
+        </Label>
+    </FlexChart>
+}
+    
 
 @code{
     string startDate = "";
     string endDate = "";
+
+    string message = "";
+    int state = 0;
+
+    List<object> display { get; set; }
+
+    DataParser p = new DataParser();
+
+    string path = @"C:\Users\aj_ch\Documents\College\CSCI 4712\nvdcve-1.1-2017.json";
+
+    private void ParseData(string path)
+    {
+        message = "Data is parsing";
+        display = p.QueryFile(path);
+        state = 1;
+        message = "Data has parsed";
+    }
 
     private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
     {
@@ -30,7 +68,7 @@
     {
         foreach(var fiName in fileList)
         {
-            var file = await _fileHandler.DownloadFileAsync(fiName);
+           var file = await _fileHandler.DownloadFileAsync(fiName);
            SaveData(file);
         }
     }

@@ -5,6 +5,7 @@
 @using Data
 @using Services
 @using System.Diagnostics
+@using Parser
 
 @inject DataCalculatorDbContext _context 
 @inject MetaDataDbContext _md_context
@@ -73,6 +74,7 @@
                     _md_context.UploadMetaData(datum);
                     await _fileHandler.UploadFileAsync(datum);
                     totalFileSize += datum.Size;
+                   
                 }
                 stopwatch.Stop();
 
