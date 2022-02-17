@@ -9,6 +9,7 @@
 @inject DataCalculatorDbContext _context 
 @inject MetaDataDbContext _md_context
 @inject IFileHandler _fileHandler
+@inject NavigationManager NavigationManager
 
 @* The form *@
 <h3>Upload Data</h3>
@@ -19,7 +20,13 @@
             <label for="File">File</label>
             <BlazorInputFile.InputFile id="File" class="form-control" accept=".json" OnChange="@HandleFileUpload" multiple />
             <strong>
-                file(s) selected: @fileName
+                file(s) selected: 
+                <ul>
+                @foreach (FileSendData datum in data)
+                {
+                   <li>@datum.FileName</li>
+                }
+                </ul>
             </strong>
         </div>
         <button class="btn btn-primary" type="submit">Send file</button>
@@ -27,84 +34,105 @@
     <p>@message</p>
     <p>@message2</p>
     <p>@UploadTimeMessage</p>
+    <p>@totalFileSizeMessage</p>
+    @if(state == 1)
+    {
+        <button class="btn btn-primary" @onclick="onClick">Query Now</button>
+    }
 </div>
 
 
-@code {
-    private List<FileSendData> data = new List<FileSendData>(); 
+        @code {
+        private List<FileSendData> data = new List<FileSendData>(); 
 
-    private string message;
+        private string message;
 
-    private string message2;
+        private string message2;
 
-    private string fileName;
+        private string UploadTimeMessage;
 
-    private string UploadTimeMessage;
+        private string timeToUpload;
 
-    private string timeToUpload;
+        private long totalFileSize = 0;
 
-    private async void HandleValidSubmit()
-    {
-        if (data.Count != 0)
+        private string totalFileSizeMessage;
+
+        private int state = 0;
+
+        private async void HandleValidSubmit()
         {
-            Stopwatch stopwatch = new Stopwatch();
-
-            message = "Uploading to Amazon S3";
-
-            stopwatch.Start();
-            foreach (FileSendData datum in data)
+            if (data.Count != 0)
             {
-                _md_context.UploadMetaData(datum);
-                await _fileHandler.UploadFileAsync(datum);
-            }
-            stopwatch.Stop();
+                Stopwatch stopwatch = new Stopwatch();
 
-            TimeSpan ts = stopwatch.Elapsed;
-            message = "All files are now uploaded to S3";
-            message2 = "All Metadata of the all files are now uploaded to S3";
+                message = "Uploading to Amazon S3";
 
-            timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
-            UploadTimeMessage = $"Time to upload is: {timeToUpload} seconds";
-            base.StateHasChanged();
+                stopwatch.Start();
+                foreach (FileSendData datum in data)
+                {
+                    _md_context.UploadMetaData(datum);
+                    await _fileHandler.UploadFileAsync(datum);
+                    totalFileSize += datum.Size;
+                }
+                stopwatch.Stop();
 
-        }
+                TimeSpan ts = stopwatch.Elapsed;
+                message = "All files are now uploaded to S3";
+                message2 = "All Metadata of the all files are now uploaded to S3";
 
-        else
-        {
-            message = "You did not upload anything. Please try again.";
-        }
+                timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
+                UploadTimeMessage = $"Time to upload is: {timeToUpload} seconds";
+                totalFileSizeMessage = $"{totalFileSize / 1000000} MB has been uploaded";
 
-
-    }
-
-    private void HandleFileUpload(IFileListEntry[] file)
-    {
-        Random rnd = new Random();
-
-        for (int i = 0; i < file.Length; i++)
-        {
-            data.Add(new FileSendData());
-
-            if (file[i] != null)
-            {
-                data[i].File = file[i];
-                data[i].Id = rnd.Next(201);        
-                fileName = data[i].File.Name;
-                data[i].FileName = fileName;
-                data[i].Type = data[i].File.Type;
-                data[i].Size = data[i].File.Size;
-                data[i].Date = data[i].File.LastModified;
-                data[i].Year = data[i].GetYear();
-                data[i].Path = data[i].File.RelativePath;
+                ChangeState();
+                base.StateHasChanged();
             }
 
             else
             {
-                message = "Error: A Null file exists";
+                message = "You did not upload anything. Please try again.";
+            }
+
+
+        }
+
+        private void HandleFileUpload(IFileListEntry[] file)
+        {
+            Random rnd = new Random();
+
+            for (int i = 0; i < file.Length; i++)
+            {
+                data.Add(new FileSendData());
+
+                if (file[i] != null)
+                {
+                    data[i].File = file[i];
+                    data[i].Id = rnd.Next(201);
+                    data[i].FileName = data[i].File.Name;
+                    data[i].Type = data[i].File.Type;
+                    data[i].Size = data[i].File.Size;
+                    data[i].Date = data[i].File.LastModified;
+                    data[i].Year = data[i].GetYear();
+                    data[i].Path = data[i].File.RelativePath;
+                }
+
+                else
+                {
+                    message = "Error: A Null file exists";
+                }
             }
         }
-       
-    }
 
+        private void ChangeState()
+        {
+            if (state == 0)
+            {
+                state = 1;
+            }
+        }
 
+        public void onClick()
+        {
+            NavigationManager.NavigateTo("/fetchdata");
+        }
 }
