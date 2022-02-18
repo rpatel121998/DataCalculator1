@@ -92,3 +92,7 @@ C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalcul
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\obj\Debug\net6.0\DataCalculatorWebAppServer.pdb
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\obj\Debug\net6.0\DataCalculatorWebAppServer.genruntimeconfig.cache
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\obj\Debug\net6.0\DataCalculatorWebAppServer.csproj.AssemblyReference.cache
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2019.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2021.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2017.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2018.json

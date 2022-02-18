@@ -7,6 +7,9 @@
 @using C1.Chart
 @using C1.Blazor.Chart
 @using Parser
+@using MongoDB.Bson
+@using MongoDB.Driver
+@using System.Diagnostics
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
@@ -16,23 +19,33 @@
 <input @bind="startDate">Enter starting year</input>
 <p>Enter end year</p>
 <input @bind="endDate">Enter final year</input>
-<button @onclick = "() => MetaDataQuery(startDate,endDate)" >Click to begin</button>
-<button @onclick = "() => ParseData(path)" >Query Data</button>
+<button @onclick = "() => MetaDataQuery(startDate, endDate)" >Query Data</button>
+<p>@messageNotif</p>
 <p>@message</p>
+<p>@QueryTimeMessage</p>
 @if (state == 1)
 {
-    <p>@message</p>
-    <FlexChart Class="chart" ChartType="ChartType.Column"
-    HeaderContent="Top Vulnerabilities in 2019" HeaderStyle="font-size:24px"
-    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
-    BindingX="name" ItemsSource="display">
-        <SeriesCollection>
-            <Series Name="count" Binding="count" />
-        </SeriesCollection>
-        <Label>
-            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
-        </Label>
-    </FlexChart>
+    int i = 0;
+    
+    foreach (List<object> display in displays)
+    {
+        string yr = GetYear(i);
+        string m_content = $"Top Vulnerabilties in {yr}";
+         <FlexChart Class="chart" ChartType="ChartType.Column"
+            HeaderContent=@m_content HeaderStyle="font-size:24px"
+            LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
+            BindingX="name" ItemsSource="display">
+                <SeriesCollection>
+                    <Series Name="count" Binding="count" />
+                </SeriesCollection>
+                <Label>
+                    <DataLabel Position="LabelPosition.Top" Content="{value}"/>
+                </Label>
+         </FlexChart>
+         i++;
+    }
+    
+
 }
     
 
@@ -40,36 +53,84 @@
     string startDate = "";
     string endDate = "";
 
+    string messageNotif = "";
     string message = "";
     int state = 0;
+    string errorMessage = "";
+    string timeToUpload ="";
+    string QueryTimeMessage = "";
 
-    List<object> display { get; set; }
-
+    List<List<object>> displays = new List<List<object>>();
+    List<string> fileNames = new List<string>();
     DataParser p = new DataParser();
 
-    string path = @"C:\Users\aj_ch\Documents\College\CSCI 4712\nvdcve-1.1-2017.json";
-
-    private void ParseData(string path)
+    private void ParseData(List<string> filenames)
     {
-        message = "Data is parsing";
-        display = p.QueryFile(path);
+        string path = @"C:.\Downloads\";
+        int i = 0;
+        foreach (string name in filenames)
+        {
+            path += name;
+            List<object> data = new List<object>();
+            data = p.QueryFile(path);
+            displays.Add(data);
+            path = @"C:.\Downloads\";
+        }
+
         state = 1;
-        message = "Data has parsed";
     }
 
     private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
     {
-        Console.WriteLine(startingQueryDate + endingQueryDate);        
-        string[] fileNames = {"nvdcve-1.1-2019.json", "nvdcve-1.1-2021.json"};// Query MongoDb for all file names from start to end year and store in fileNames
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        messageNotif = "Querying Data...";
+        MongoClient dbclient = new MongoClient("mongodb+srv://rpatel1:Yash2001@cluster0.fbfor.mongodb.net/NDVData?retryWrites=true&w=majority");
+        var database = dbclient.GetDatabase("NDVData");
+        var collection = database.GetCollection<BsonDocument>("Test1");
+        int span = Math.Abs(int.Parse(startingQueryDate) - int.Parse(endingQueryDate));
+        int qYear;
+
+        // Meta Data Query goes here
+        for (int i = 0; i <= span; i++)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("year", startingQueryDate);
+            var result = collection.Find(filter).ToList();
+            string name = result[result.Count - 1]["file_Name"].AsString;
+
+            fileNames.Add(name);
+
+            qYear  = int.Parse(startingQueryDate) + 1;
+            startingQueryDate = qYear.ToString();
+        }
+
         DownloadFile(fileNames);
+        ParseData(fileNames);
+        stopwatch.Stop();
+        TimeSpan ts = stopwatch.Elapsed;
+        timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
+        message = "Data has queried";
+        QueryTimeMessage = $"Time to query is: {timeToUpload} seconds";
+        
     }
 
-    private async Task DownloadFile(string[] fileList)
+    private async Task DownloadFile(List<string> fileList)
     {
         foreach(var fiName in fileList)
         {
-           var file = await _fileHandler.DownloadFileAsync(fiName);
-           SaveData(file);
+            if (File.Exists($@"C:.\Downloads\{fiName}") == false)
+                continue;
+
+            try
+            {
+                var file = await _fileHandler.DownloadFileAsync(fiName);
+                SaveData(file);
+            }
+
+            catch 
+            {
+                continue;
+            }
         }
     }
 
@@ -93,4 +154,11 @@
         return true;
     }
     
+    public string GetYear(int i)
+    {
+        char[] delimiterChars = { '-' };
+        string[] fileNameArray = fileNames[i].Split(delimiterChars);
+        fileNameArray = fileNameArray[2].Split('.');
+        return fileNameArray[0];
+    }
 }
