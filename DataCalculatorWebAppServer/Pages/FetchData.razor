@@ -14,15 +14,21 @@
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 
-<h1>Download file for query</h1>
-<p>Enter starting year</p>
-<input @bind="startDate">Enter starting year</input>
-<p>Enter end year</p>
-<input @bind="endDate">Enter final year</input>
-<button @onclick = "() => MetaDataQuery(startDate, endDate)" >Query Data</button>
-<p>@messageNotif</p>
+<h1>Query Data</h1>
+
+<div id="year-field">
+    <p>Enter starting year:</p>
+    <input @bind="startDate">Enter starting year</input>
+</div>
+
+<div id="year-field">
+    <p>Enter end year:</p>
+    <input @bind="endDate">Enter final year</input>
+</div>
+<button class="btn btn-primary" @onclick = "() => MetaDataQuery(startDate, endDate)" >Query Data</button>
 <p>@message</p>
 <p>@QueryTimeMessage</p>
+<p>@QuerySizeMessage</p>
 @if (state == 1)
 {
     int i = 0;
@@ -53,12 +59,12 @@
     string startDate = "";
     string endDate = "";
 
-    string messageNotif = "";
     string message = "";
     int state = 0;
     string errorMessage = "";
     string timeToUpload ="";
     string QueryTimeMessage = "";
+    string QuerySizeMessage = "";
 
     List<List<object>> displays = new List<List<object>>();
     List<string> fileNames = new List<string>();
@@ -80,16 +86,29 @@
         state = 1;
     }
 
-    private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
+    private async Task MetaDataQuery(string startingQueryDate, string endingQueryDate )
     {
-        Stopwatch stopwatch = new Stopwatch();
-        stopwatch.Start();
-        messageNotif = "Querying Data...";
+        state = 0;
+        message = "";
+        QueryTimeMessage = "";
+        errorMessage = "";
+
+        fileNames.Clear();
+        displays.Clear();
+
+        message = "Querying Data...";
+        //Stopwatch stopwatch = new Stopwatch();
+        //stopwatch.Start();
+        DateTime start = DateTime.Now;
+
         MongoClient dbclient = new MongoClient("mongodb+srv://rpatel1:Yash2001@cluster0.fbfor.mongodb.net/NDVData?retryWrites=true&w=majority");
         var database = dbclient.GetDatabase("NDVData");
         var collection = database.GetCollection<BsonDocument>("Test1");
+
         int span = Math.Abs(int.Parse(startingQueryDate) - int.Parse(endingQueryDate));
         int qYear;
+        long fileSize = 0;
+        //int queryCount = 0;
 
         // Meta Data Query goes here
         for (int i = 0; i <= span; i++)
@@ -97,30 +116,35 @@
             var filter = Builders<BsonDocument>.Filter.Eq("year", startingQueryDate);
             var result = collection.Find(filter).ToList();
             string name = result[result.Count - 1]["file_Name"].AsString;
+            fileSize += result[result.Count - 1]["file_size"].AsInt64;
+
 
             fileNames.Add(name);
 
             qYear  = int.Parse(startingQueryDate) + 1;
             startingQueryDate = qYear.ToString();
+            //queryCount = i;
         }
 
-        DownloadFile(fileNames);
+        await DownloadFile(fileNames);
         ParseData(fileNames);
-        stopwatch.Stop();
-        TimeSpan ts = stopwatch.Elapsed;
-        timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
+        // stopwatch.Stop();
+        // TimeSpan ts = stopwatch.Elapsed;
+        DateTime end = DateTime.Now;
+        TimeSpan ts = end.Subtract(start);
+
         message = "Data has queried";
-        QueryTimeMessage = $"Time to query is: {timeToUpload} seconds";
-        
+        QueryTimeMessage = $"Time to query is: {ts.Minutes} minute(s) and {ts.Seconds}.{ts.Milliseconds} seconds";
+        QuerySizeMessage = $"{fileSize / (long)1000000} MB worth of data has been queried";
+
     }
 
     private async Task DownloadFile(List<string> fileList)
     {
         foreach(var fiName in fileList)
         {
-            if (File.Exists($@"C:.\Downloads\{fiName}") == false)
+            if (File.Exists($@"C:.\Downloads\{fiName}") == true) 
                 continue;
-
             try
             {
                 var file = await _fileHandler.DownloadFileAsync(fiName);

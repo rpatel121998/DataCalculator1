@@ -60,15 +60,16 @@
 
         private int state = 0;
 
-        private async void HandleValidSubmit()
+        private async Task HandleValidSubmit()
         {
             if (data.Count != 0)
             {
-                Stopwatch stopwatch = new Stopwatch();
+                //Stopwatch stopwatch = new Stopwatch();
 
                 message = "Uploading to Amazon S3";
 
-                stopwatch.Start();
+                //stopwatch.Start();
+                DateTime start = DateTime.Now;
                 foreach (FileSendData datum in data)
                 {
                     _md_context.UploadMetaData(datum);
@@ -76,15 +77,16 @@
                     totalFileSize += datum.Size;
                    
                 }
-                stopwatch.Stop();
-
-                TimeSpan ts = stopwatch.Elapsed;
+                //stopwatch.Stop();
+                DateTime end = DateTime.Now;
+                TimeSpan ts = end.Subtract(start);
+                //TimeSpan ts = stopwatch.Elapsed;
                 message = "All files are now uploaded to S3";
                 message2 = "All Metadata of the all files are now uploaded to S3";
 
-                timeToUpload = $"{ts.Seconds}.{ts.Milliseconds}";
-                UploadTimeMessage = $"Time to upload is: {timeToUpload} seconds";
+                UploadTimeMessage = $"Time to upload is: {ts.Minutes} minute(s) and {ts.Seconds}.{ts.Milliseconds} seconds";
                 totalFileSizeMessage = $"{totalFileSize / 1000000} MB has been uploaded";
+                
 
                 ChangeState();
                 base.StateHasChanged();
