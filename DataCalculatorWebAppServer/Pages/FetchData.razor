@@ -13,176 +13,90 @@
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
+@inject MetaDataDbContext _md_context
 
 <h1>Query Data</h1>
 
-<div id="year-field">
-    <p>Enter starting year:</p>
-    <input @bind="startDate">Enter starting year</input>
-</div>
-
-<div id="year-field">
-    <p>Enter end year:</p>
-    <input @bind="endDate">Enter final year</input>
-</div>
-<button class="btn btn-primary" @onclick = "() => MetaDataQuery(startDate, endDate)" >Query Data</button>
-<p>@message</p>
-<p>@QueryTimeMessage</p>
-<p>@QuerySizeMessage</p>
-@if (state == 1)
-{
-    int i = 0;
-    
-    foreach (List<object> display in displays)
-    {
-        string yr = GetYear(i);
-        string m_content = $"Top Vulnerabilties in {yr}";
-         <FlexChart Class="chart" ChartType="ChartType.Column"
-            HeaderContent=@m_content HeaderStyle="font-size:24px"
-            LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
-            BindingX="name" ItemsSource="display">
-                <SeriesCollection>
-                    <Series Name="count" Binding="count" />
-                </SeriesCollection>
-                <Label>
-                    <DataLabel Position="LabelPosition.Top" Content="{value}"/>
-                </Label>
-         </FlexChart>
-         i++;
-    }
-    
-
-}
-    
-
-@code{
-    string startDate = "";
-    string endDate = "";
-
-    string message = "";
-    int state = 0;
-    string errorMessage = "";
-    string timeToUpload ="";
-    string QueryTimeMessage = "";
-    string QuerySizeMessage = "";
-
-    List<List<object>> displays = new List<List<object>>();
-    List<string> fileNames = new List<string>();
-    DataParser p = new DataParser();
-
-    private void ParseData(List<string> filenames)
-    {
-        string path = @"C:.\Downloads\";
-        int i = 0;
-        foreach (string name in filenames)
+<div id="query-field">
+    <div id="query-field-child">
+        <h4>Paradise</h4>
+        <div id="year-field">
+            <p>Enter starting year:</p>
+            <input @bind="startDate">Enter starting year</input>
+        </div>
+        <p></p>
+        <div id="year-field">
+            <p>Enter end year:</p>
+            <input @bind="endDate">Enter final year</input>
+        </div>
+        <button class="btn btn-primary" @onclick= "() => MetaDataQuery(startDate, endDate)">Query Data</button>
+        <p>@message</p>
+        <p>@QueryTimeMessage</p>
+        <p>@QuerySizeMessage</p>
+        @if (state == 1)
         {
-            path += name;
-            List<object> data = new List<object>();
-            data = p.QueryFile(path);
-            displays.Add(data);
-            path = @"C:.\Downloads\";
-        }
-
-        state = 1;
-    }
-
-    private async Task MetaDataQuery(string startingQueryDate, string endingQueryDate )
-    {
-        state = 0;
-        message = "";
-        QueryTimeMessage = "";
-        errorMessage = "";
-
-        fileNames.Clear();
-        displays.Clear();
-
-        message = "Querying Data...";
-        //Stopwatch stopwatch = new Stopwatch();
-        //stopwatch.Start();
-        DateTime start = DateTime.Now;
-
-        MongoClient dbclient = new MongoClient("mongodb+srv://rpatel1:Yash2001@cluster0.fbfor.mongodb.net/NDVData?retryWrites=true&w=majority");
-        var database = dbclient.GetDatabase("NDVData");
-        var collection = database.GetCollection<BsonDocument>("Test1");
-
-        int span = Math.Abs(int.Parse(startingQueryDate) - int.Parse(endingQueryDate));
-        int qYear;
-        long fileSize = 0;
-        //int queryCount = 0;
-
-        // Meta Data Query goes here
-        for (int i = 0; i <= span; i++)
-        {
-            var filter = Builders<BsonDocument>.Filter.Eq("year", startingQueryDate);
-            var result = collection.Find(filter).ToList();
-            string name = result[result.Count - 1]["file_Name"].AsString;
-            fileSize += result[result.Count - 1]["file_size"].AsInt64;
-
-
-            fileNames.Add(name);
-
-            qYear  = int.Parse(startingQueryDate) + 1;
-            startingQueryDate = qYear.ToString();
-            //queryCount = i;
-        }
-
-        await DownloadFile(fileNames);
-        ParseData(fileNames);
-        // stopwatch.Stop();
-        // TimeSpan ts = stopwatch.Elapsed;
-        DateTime end = DateTime.Now;
-        TimeSpan ts = end.Subtract(start);
-
-        message = "Data has queried";
-        QueryTimeMessage = $"Time to query is: {ts.Minutes} minute(s) and {ts.Seconds}.{ts.Milliseconds} seconds";
-        QuerySizeMessage = $"{fileSize / (long)1000000} MB worth of data has been queried";
-
-    }
-
-    private async Task DownloadFile(List<string> fileList)
-    {
-        foreach(var fiName in fileList)
-        {
-            if (File.Exists($@"C:.\Downloads\{fiName}") == true) 
-                continue;
-            try
+            int i = 0;
+    
+            foreach (List<object> display in displays)
             {
-                var file = await _fileHandler.DownloadFileAsync(fiName);
-                SaveData(file);
+                string yr = GetYear(i);
+                string m_content = $"Top Vulnerabilties in {yr}";
+                    <FlexChart Class="chart" ChartType="ChartType.Column"
+                    HeaderContent=@m_content HeaderStyle="font-size:24px"
+                    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
+                    BindingX="name" ItemsSource="display">
+                        <SeriesCollection>
+                            <Series Name="count" Binding="count" />
+                        </SeriesCollection>
+                        <Label>
+                            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
+                        </Label>
+                    </FlexChart>
+                    i++;
             }
 
-            catch 
-            {
-                continue;
-            }
         }
-    }
-
-    protected bool SaveData(TransferFile byteFile)
-    {
-        BinaryWriter Writer = null;
-        string Name = @"C:.\Downloads\";
-
-        try
+    </div>
+    <div id="query-field-child">
+        <h4>Glue</h4>
+        <div id="year-field">
+            <p>Enter starting year:</p>
+            <input @bind="startDate">Enter starting year</input>
+        </div>
+        <p></p>
+        <div id="year-field">
+            <p>Enter end year:</p>
+            <input @bind="endDate">Enter final year</input>
+        </div>
+        <button class="btn btn-primary" @onclick= "() => MetaDataQuery(startDate, endDate)">Query Data</button>
+        <p>@message</p>
+        <p>@QueryTimeMessage</p>
+        <p>@QuerySizeMessage</p>
+        @if (state == 1)
         {
-            Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));              
-            Writer.Write(byteFile.Content);
-            Writer.Flush();
-            Writer.Close();
-        }
-        catch 
-        {
-            return false;
-        }
-
-        return true;
-    }
+            int i = 0;
     
-    public string GetYear(int i)
-    {
-        char[] delimiterChars = { '-' };
-        string[] fileNameArray = fileNames[i].Split(delimiterChars);
-        fileNameArray = fileNameArray[2].Split('.');
-        return fileNameArray[0];
-    }
-}
+            foreach (List<object> display in displays)
+            {
+                string yr = GetYear(i);
+                string m_content = $"Top Vulnerabilties in {yr}";
+                    <FlexChart Class="chart" ChartType="ChartType.Column"
+                    HeaderContent=@m_content HeaderStyle="font-size:24px"
+                    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
+                    BindingX="name" ItemsSource="display">
+                        <SeriesCollection>
+                            <Series Name="count" Binding="count" />
+                        </SeriesCollection>
+                        <Label>
+                            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
+                        </Label>
+                    </FlexChart>
+                    i++;
+            }
+
+        }
+    </div>
+  
+</div>
+
+    
