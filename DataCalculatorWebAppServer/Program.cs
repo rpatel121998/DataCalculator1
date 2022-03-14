@@ -22,7 +22,7 @@ builder.Services.AddAWSService<IAmazonS3>();
 builder.Services.AddScoped<IAwsS3FileManager, AwsS3FileManager>();
 builder.Services.AddScoped<IFileHandler, FileHandler>();
 builder.Services.AddScoped<MetaDataDbContext>();
-
+//builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 //var client = new MongoClient("mongodb+srv://rpatel1:Yash2001@cluster0.fbfor.mongodb.net/NDVData?retryWrites=true&w=majority");
 
 var app = builder.Build();

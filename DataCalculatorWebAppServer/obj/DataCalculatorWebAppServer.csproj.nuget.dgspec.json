@@ -46,11 +46,11 @@
           "dependencies": {
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[3.7.1, )"
+              "version": "[3.7.2, )"
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[3.7.7.19, )"
+              "version": "[3.7.8.7, )"
             },
             "BlazorInputFile": {
               "target": "Package",
@@ -66,29 +66,41 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.3, )"
             },
             "MongoDB.Bson": {
               "target": "Package",
-              "version": "[2.14.1, )"
+              "version": "[2.15.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.14.1, )"
+              "version": "[2.15.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[3.16.3, )"
+            },
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[19.4.0.55, )"
+            },
+            "Syncfusion.Blazor.SplitButtons": {
+              "target": "Package",
+              "version": "[19.4.0.55, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",
@@ -113,7 +125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

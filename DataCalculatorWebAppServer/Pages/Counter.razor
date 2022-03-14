@@ -15,11 +15,12 @@
 @* The form *@
 <h3>Upload Data</h3>
 <div class="sendFileForm">
-      <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
-
+      <div class="form-child">
+           <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
         <div class="form-group">
+            <h4>Paradise</h4>
             <label for="File">File</label>
-            <BlazorInputFile.InputFile id="File" class="form-control" accept=".json" OnChange="@HandleFileUpload" multiple />
+            <BlazorInputFile.InputFile id="File" class="form-control" accept=".json, .xml" OnChange="@HandleFileUpload" multiple />
             <strong>
                 file(s) selected: 
                 <ul>
@@ -31,112 +32,46 @@
             </strong>
         </div>
         <button class="btn btn-primary" type="submit">Send file</button>
-    </EditForm>
-    <p>@message</p>
-    <p>@message2</p>
-    <p>@UploadTimeMessage</p>
-    <p>@totalFileSizeMessage</p>
+        <p>@message</p>
+        <p>@message2</p>
+        <p>@UploadTimeMessage</p>
+        <p>@totalFileSizeMessage</p>
+      </EditForm>
+      </div>
+
+      <div class="form-child">
+          <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
+        <div class="form-group">
+            <h4>AWS Glue</h4>
+            <label for="File">File</label>
+            <BlazorInputFile.InputFile id="File" class="form-control" accept=".json, .xml" OnChange="@HandleFileUpload" multiple />
+            <strong>
+                file(s) selected: 
+                <ul>
+                @foreach (FileSendData datum in data)
+                {
+                   <li>@datum.FileName</li>
+                }
+                </ul>
+            </strong>
+        </div>
+        <button class="btn btn-primary" type="submit">Send file</button>
+        <p>@GlueMessage</p>
+        <p>@GlueMessage2</p>
+        <p>@gUploadTimeMessage</p>
+        <p>@gTotalFileSize</p>
+      </EditForm>
+      </div>
+      
+
     @if(state == 1)
     {
         <button class="btn btn-primary" @onclick="onClick">Query Now</button>
     }
+
+    @if(g_state == 1)
+    {
+        <button class="btn btn-primary" @onclick="onClickGlue">Query Now</button>
+    }
 </div>
 
-
-        @code {
-        private List<FileSendData> data = new List<FileSendData>(); 
-
-        private string message;
-
-        private string message2;
-
-        private string UploadTimeMessage;
-
-        private string timeToUpload;
-
-        private long totalFileSize = 0;
-
-        private string totalFileSizeMessage;
-
-        private int state = 0;
-
-        private async Task HandleValidSubmit()
-        {
-            if (data.Count != 0)
-            {
-                //Stopwatch stopwatch = new Stopwatch();
-
-                message = "Uploading to Amazon S3";
-
-                //stopwatch.Start();
-                DateTime start = DateTime.Now;
-                foreach (FileSendData datum in data)
-                {
-                    _md_context.UploadMetaData(datum);
-                    await _fileHandler.UploadFileAsync(datum);
-                    totalFileSize += datum.Size;
-                   
-                }
-                //stopwatch.Stop();
-                DateTime end = DateTime.Now;
-                TimeSpan ts = end.Subtract(start);
-                //TimeSpan ts = stopwatch.Elapsed;
-                message = "All files are now uploaded to S3";
-                message2 = "All Metadata of the all files are now uploaded to S3";
-
-                UploadTimeMessage = $"Time to upload is: {ts.Minutes} minute(s) and {ts.Seconds}.{ts.Milliseconds} seconds";
-                totalFileSizeMessage = $"{totalFileSize / 1000000} MB has been uploaded";
-                
-
-                ChangeState();
-                base.StateHasChanged();
-            }
-
-            else
-            {
-                message = "You did not upload anything. Please try again.";
-            }
-
-
-        }
-
-        private void HandleFileUpload(IFileListEntry[] file)
-        {
-            Random rnd = new Random();
-
-            for (int i = 0; i < file.Length; i++)
-            {
-                data.Add(new FileSendData());
-
-                if (file[i] != null)
-                {
-                    data[i].File = file[i];
-                    data[i].Id = rnd.Next(201);
-                    data[i].FileName = data[i].File.Name;
-                    data[i].Type = data[i].File.Type;
-                    data[i].Size = data[i].File.Size;
-                    data[i].Date = data[i].File.LastModified;
-                    data[i].Year = data[i].GetYear();
-                    data[i].Path = data[i].File.RelativePath;
-                }
-
-                else
-                {
-                    message = "Error: A Null file exists";
-                }
-            }
-        }
-
-        private void ChangeState()
-        {
-            if (state == 0)
-            {
-                state = 1;
-            }
-        }
-
-        public void onClick()
-        {
-            NavigationManager.NavigateTo("/fetchdata");
-        }
-}
