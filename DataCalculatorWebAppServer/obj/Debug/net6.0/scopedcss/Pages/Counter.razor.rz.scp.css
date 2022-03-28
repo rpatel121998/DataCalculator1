@@ -1,0 +1,22 @@
+/*.namespace DataCalculatorWebAppServer.Pages
+{
+    
+}*/
+
+.sendFileForm[b-47cneoet5b] {
+    border: 3px solid #fff;
+    width: auto;
+    /*padding: 20px;*/
+}
+
+.form-child[b-47cneoet5b] {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 10px;
+}
+
+    .form-child > p[b-47cneoet5b], .form-child > div[b-47cneoet5b], .form-child > div > p[b-47cneoet5b]{
+        width: 50%;
+        float: left;
+    }
