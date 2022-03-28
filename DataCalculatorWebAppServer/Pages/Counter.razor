@@ -6,6 +6,10 @@
 @using Services
 @using System.Diagnostics
 @using Parser
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.SplitButtons
+@using MongoDB.Bson;
+@using MongoDB.Driver;
 
 @inject DataCalculatorDbContext _context 
 @inject MetaDataDbContext _md_context
@@ -14,11 +18,8 @@
 
 @* The form *@
 <h3>Upload Data</h3>
-<div class="sendFileForm">
-      <div class="form-child">
-           <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
-        <div class="form-group">
-            <h4>Paradise</h4>
+
+ <div class="form-group">
             <label for="File">File</label>
             <BlazorInputFile.InputFile id="File" class="form-control" accept=".json, .xml" OnChange="@HandleFileUpload" multiple />
             <strong>
@@ -30,48 +31,87 @@
                 }
                 </ul>
             </strong>
+</div>
+
+<div class="sendFileForm">
+      
+      <div class="form-child">
+           <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
+        <div class="form-group">
+            <h4>Paradise</h4>
         </div>
-        <button class="btn btn-primary" type="submit">Send file</button>
+        <button class="btn btn-primary" type="submit">Upload file(s)</button>
         <p>@message</p>
         <p>@message2</p>
         <p>@UploadTimeMessage</p>
         <p>@totalFileSizeMessage</p>
       </EditForm>
+      @if(state == 1)
+      {
+        <h4>Upload History</h4>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Current Upload Time</th>
+                    <th>Previous Upload Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+          @for (int i = 0; i < data.Count; i++) 
+          {
+                   <tr>
+                        <td>@data[i].FileName</td>
+                        <td>@currentUploadTimes[i]</td>
+                        <td>@uploadTimeHistory[i]</td>
+                   </tr>
+          }
+                
+            </tbody>
+        </table>
+      }
       </div>
 
       <div class="form-child">
           <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
         <div class="form-group">
             <h4>AWS Glue</h4>
-            <label for="File">File</label>
-            <BlazorInputFile.InputFile id="File" class="form-control" accept=".json, .xml" OnChange="@HandleFileUpload" multiple />
-            <strong>
-                file(s) selected: 
-                <ul>
-                @foreach (FileSendData datum in data)
-                {
-                   <li>@datum.FileName</li>
-                }
-                </ul>
-            </strong>
         </div>
-        <button class="btn btn-primary" type="submit">Send file</button>
+        <button class="btn btn-primary" type="submit">Upload file(s)</button>
         <p>@GlueMessage</p>
         <p>@GlueMessage2</p>
         <p>@gUploadTimeMessage</p>
         <p>@gTotalFileSize</p>
       </EditForm>
-      </div>
-      
+      @if(g_state == 1)
+      {
+        <h4>Upload History</h4>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Current Upload Time</th>
+                    <th>Previous Upload Time</th>
+                </tr>
+            </thead>
+            <tbody>
 
-    @if(state == 1)
-    {
+          @for (int i = 0; i < data.Count; i++) 
+          {
+                   <tr>
+                        <td>@data[i].FileName</td>
+                        <td>@currentUploadTimes[i]</td>
+                        <td>@uploadTimeHistory[i]</td>
+                   </tr>
+          }
+                
+            </tbody>
+        </table>
+
         <button class="btn btn-primary" @onclick="onClick">Query Now</button>
-    }
-
-    @if(g_state == 1)
-    {
         <button class="btn btn-primary" @onclick="onClickGlue">Query Now</button>
-    }
+      }
+      </div>
 </div>
 

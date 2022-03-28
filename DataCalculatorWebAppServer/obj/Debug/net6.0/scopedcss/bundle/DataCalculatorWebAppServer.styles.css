@@ -42,6 +42,10 @@
     padding: 20px;
     border: 10px;
 }
+
+.query-field-child:nth-child(2)[b-2x654hknpn] {
+    float: right;
+}
 /* _content/DataCalculatorWebAppServer/Shared/MainLayout.razor.rz.scp.css */
 .page[b-huanuhoab5] {
     position: relative;
