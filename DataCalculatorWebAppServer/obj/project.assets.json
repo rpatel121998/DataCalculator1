@@ -794,7 +794,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Radzen.Blazor/3.16.3": {
+      "Radzen.Blazor/3.16.6": {
         "type": "package",
         "dependencies": {
           "LibSassBuilder": "2.0.1",
@@ -2994,10 +2994,10 @@
         "packageIcon.png"
       ]
     },
-    "Radzen.Blazor/3.16.3": {
-      "sha512": "v+ZIS44csGyxoZUIug6QiUAGI5Ru1DgpvgxZYui9Pt5Uze9d/UGqUwC7CEUOpdti7xTQeXr6iEFQjiulcXr70g==",
+    "Radzen.Blazor/3.16.6": {
+      "sha512": "h5wUTc3QjuWwWKjTD1yGrBQj8U0cNdRA3bb0hWVt4L53qKlHBssZ2mNyF79Ed1RpTU3sepKRCE64WHeb4HwOOA==",
       "type": "package",
-      "path": "radzen.blazor/3.16.3",
+      "path": "radzen.blazor/3.16.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3011,7 +3011,7 @@
         "lib/net5.0/Radzen.Blazor.xml",
         "lib/netstandard2.1/Radzen.Blazor.dll",
         "lib/netstandard2.1/Radzen.Blazor.xml",
-        "radzen.blazor.3.16.3.nupkg.sha512",
+        "radzen.blazor.3.16.6.nupkg.sha512",
         "radzen.blazor.nuspec",
         "staticwebassets/Radzen.Blazor.js",
         "staticwebassets/css/dark-base.css",
@@ -5269,7 +5269,7 @@
       "MongoDB.Bson >= 2.15.0",
       "MongoDB.Driver >= 2.15.0",
       "Newtonsoft.Json >= 13.0.1",
-      "Radzen.Blazor >= 3.16.3",
+      "Radzen.Blazor >= 3.16.6",
       "Syncfusion.Blazor >= 19.4.0.55",
       "Syncfusion.Blazor.SplitButtons >= 19.4.0.55",
       "System.Net.Http.Json >= 6.0.0"
@@ -5367,7 +5367,7 @@
           },
           "Radzen.Blazor": {
             "target": "Package",
-            "version": "[3.16.3, )"
+            "version": "[3.16.6, )"
           },
           "Syncfusion.Blazor": {
             "target": "Package",

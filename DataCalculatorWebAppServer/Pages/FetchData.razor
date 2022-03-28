@@ -55,24 +55,47 @@
                     i++;
             }
 
+              <h4>Query History</h4>
+         <table class='table'>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Current Query Time</th>
+                    <th>Previous Query Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            @for (int j = 0; j < fileNames.Count; j++) 
+            {
+                    <tr>
+                            <td>@fileNames[j]</td>
+                            <td>@currentQueryTimes[j]</td>
+                            <td>@queryTimeHistory[j]</td>
+                    </tr>
+            }
+                
+            </tbody>
+        </table>
+
         }
     </div>
     <div id="query-field-child">
         <h4>Glue</h4>
         <div id="year-field">
             <p>Enter starting year:</p>
-            <input @bind="startDate">Enter starting year</input>
+            <input @bind="g_startDate">Enter starting year</input>
         </div>
         <p></p>
         <div id="year-field">
             <p>Enter end year:</p>
-            <input @bind="endDate">Enter final year</input>
+            <input @bind="g_endDate">Enter final year</input>
         </div>
         <button class="btn btn-primary" @onclick= "() => MetaDataQuery(startDate, endDate)">Query Data</button>
-        <p>@message</p>
-        <p>@QueryTimeMessage</p>
-        <p>@QuerySizeMessage</p>
-        @if (state == 1)
+        <p>@g_message</p>
+        <p>@g_QueryTimeMessage</p>
+        <p>@g_QuerySizeMessage</p>
+        @if (g_state == 1)
         {
             int i = 0;
     

@@ -21,7 +21,7 @@
     <PackageReference Include="MongoDB.Bson" Version="2.15.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Radzen.Blazor" Version="3.16.3" />
+    <PackageReference Include="Radzen.Blazor" Version="3.16.6" />
     <PackageReference Include="Syncfusion.Blazor" Version="19.4.0.55" />
     <PackageReference Include="Syncfusion.Blazor.SplitButtons" Version="19.4.0.55" />
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />

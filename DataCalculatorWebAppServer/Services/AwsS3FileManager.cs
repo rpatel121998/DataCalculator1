@@ -15,9 +15,17 @@ namespace DataCalculatorWebAppServer.Services
         private readonly IAmazonS3 _client;
         private readonly string _bucket;
 
+        /*
+         *  public AwsS3FileManager(IAmazonS3 client, string bucket)
+            {
+                _client = client;
+                _bucket = "rawjsondatanvd";
+            }
+         */
         public AwsS3FileManager(IAmazonS3 client)
         {
             _client = client;
+            //_bucket = bucket;
             _bucket = "rawjsondatanvd";
         }
 
