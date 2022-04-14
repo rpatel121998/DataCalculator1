@@ -70,5 +70,17 @@ namespace DataCalculatorWebAppServer.Services
                 }
             }
         }
+
+        public async Task<List<S3Object>> ListObjectAsync(string bucketName)
+        {
+            var request = new ListObjectsV2Request
+            {
+                BucketName = bucketName,
+                Prefix = "write/"
+            };
+             var response = await _client.ListObjectsV2Async(request);
+             return response.S3Objects;
+        }
+
     }
 }

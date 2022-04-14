@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "VrbMGwonuNLYglMTZHxWih+HfGxeD3tBP+n7iEzGb9jkp/dichHVjIeeQM2dLuuo0HvLvo62FZ5tLdXKriSPSw==",
+  "dgSpecHash": "+/TlwTKCBXPoND7oReAQwHgKqphVE8J9ezXQATZa9vytTtbPDa/903FTpnInNsP9Zr7SSTQ9Sqvt98VD1ySBuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\DataCalculatorWebAppServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\0seba\\.nuget\\packages\\awssdk.core\\3.7.6.4\\awssdk.core.3.7.6.4.nupkg.sha512",
+    "C:\\Users\\0seba\\.nuget\\packages\\awssdk.core\\3.7.10.1\\awssdk.core.3.7.10.1.nupkg.sha512",
     "C:\\Users\\0seba\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.1\\awssdk.extensions.netcore.setup.3.7.1.nupkg.sha512",
+    "C:\\Users\\0seba\\.nuget\\packages\\awssdk.glue\\3.7.15.3\\awssdk.glue.3.7.15.3.nupkg.sha512",
     "C:\\Users\\0seba\\.nuget\\packages\\awssdk.s3\\3.7.7.19\\awssdk.s3.3.7.7.19.nupkg.sha512",
     "C:\\Users\\0seba\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\0seba\\.nuget\\packages\\datajuggler.blazor.fileupload\\6.0.1\\datajuggler.blazor.fileupload.6.0.1.nupkg.sha512",
@@ -69,12 +70,5 @@
     "C:\\Users\\0seba\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\0seba\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataCalculatorWebAppServer.Data;
 using DataCalculatorWebAppServer.Models;
+using Amazon.S3.Model;
 
 namespace DataCalculatorWebAppServer.Services
 {
@@ -32,5 +33,12 @@ namespace DataCalculatorWebAppServer.Services
             var file = await _s3FileManager.DownloadFileAsync(fileName);
             return file;
         }
+
+        public async Task<List<S3Object>> ListObjectAsync(string bucketName)
+        {
+            var list = await _s3FileManager.ListObjectAsync(bucketName);
+            return list;
+        }
+      
     }
 }

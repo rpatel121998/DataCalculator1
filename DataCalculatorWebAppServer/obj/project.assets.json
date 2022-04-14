@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "AWSSDK.Core/3.7.6.4": {
+      "AWSSDK.Core/3.7.10.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
@@ -24,6 +24,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {}
+        }
+      },
+      "AWSSDK.Glue/3.7.15.3": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.10.1, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Glue.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Glue.dll": {}
         }
       },
       "AWSSDK.S3/3.7.7.19": {
@@ -967,15 +979,15 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.6.4": {
-      "sha512": "0QJ0BzsYDOj8hDotth6vGVd/arA0vtOQgI0ovApAnEA5d9bsGpdS7NERPSrDyKL08xT3/pPGAex3OyvF8jNRLw==",
+    "AWSSDK.Core/3.7.10.1": {
+      "sha512": "8dLeCWqy+OKBoHA0AzFH/h3xAo5LpZ7Nxmx47eBF4z9dMeQsYiss3G4Jrgzr2aiDiab03q4wBLaRUTTNpl9AXQ==",
       "type": "package",
-      "path": "awssdk.core/3.7.6.4",
+      "path": "awssdk.core/3.7.10.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.6.4.nupkg.sha512",
+        "awssdk.core.3.7.10.1.nupkg.sha512",
         "awssdk.core.nuspec",
         "lib/net35/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.pdb",
@@ -1003,6 +1015,33 @@
         "awssdk.extensions.netcore.setup.nuspec",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
+      ]
+    },
+    "AWSSDK.Glue/3.7.15.3": {
+      "sha512": "irPrjG0ug2YUzlBiB0IjH/qgcO5U+BAu9OkvOZ0qnN+J23KuwxG3EP/aoBcqO7lT5n0EgoTZ0yguR+vUOiy+MQ==",
+      "type": "package",
+      "path": "awssdk.glue/3.7.15.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.Glue.CodeAnalysis.dll",
+        "awssdk.glue.3.7.15.3.nupkg.sha512",
+        "awssdk.glue.nuspec",
+        "lib/net35/AWSSDK.Glue.dll",
+        "lib/net35/AWSSDK.Glue.pdb",
+        "lib/net35/AWSSDK.Glue.xml",
+        "lib/net45/AWSSDK.Glue.dll",
+        "lib/net45/AWSSDK.Glue.pdb",
+        "lib/net45/AWSSDK.Glue.xml",
+        "lib/netcoreapp3.1/AWSSDK.Glue.dll",
+        "lib/netcoreapp3.1/AWSSDK.Glue.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Glue.xml",
+        "lib/netstandard2.0/AWSSDK.Glue.dll",
+        "lib/netstandard2.0/AWSSDK.Glue.pdb",
+        "lib/netstandard2.0/AWSSDK.Glue.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "AWSSDK.S3/3.7.7.19": {
@@ -2618,6 +2657,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AWSSDK.Extensions.NETCore.Setup >= 3.7.1",
+      "AWSSDK.Glue >= 3.7.15.3",
       "AWSSDK.S3 >= 3.7.7.19",
       "BlazorInputFile >= 0.2.0",
       "DataJuggler.Blazor.FileUpload >= 6.0.1",
@@ -2681,6 +2721,10 @@
             "target": "Package",
             "version": "[3.7.1, )"
           },
+          "AWSSDK.Glue": {
+            "target": "Package",
+            "version": "[3.7.15.3, )"
+          },
           "AWSSDK.S3": {
             "target": "Package",
             "version": "[3.7.7.19, )"
@@ -2737,13 +2781,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\0seba\\source\\repos\\DataCalculator1\\DataCalculatorWebAppServer\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

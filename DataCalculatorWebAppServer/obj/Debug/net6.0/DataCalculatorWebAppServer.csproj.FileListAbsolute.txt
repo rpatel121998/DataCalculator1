@@ -184,3 +184,4 @@ C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2019.json
 C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\nvdcve-1.1-2021.json
+C:\Users\0seba\source\repos\DataCalculator1\DataCalculatorWebAppServer\bin\Debug\net6.0\AWSSDK.Glue.dll

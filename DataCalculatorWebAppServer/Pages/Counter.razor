@@ -5,6 +5,8 @@
 @using Data
 @using Services
 @using System.Diagnostics
+@using Amazon
+@using Amazon.S3.Model
 
 @inject DataCalculatorDbContext _context 
 @inject MetaDataDbContext _md_context
@@ -27,6 +29,7 @@
     <p>@message</p>
     <p>@message2</p>
     <p>@UploadTimeMessage</p>
+    <p>@listObjects</p>
 </div>
 
 
@@ -103,8 +106,5 @@
                 message = "Error: A Null file exists";
             }
         }
-       
     }
-
-
 }

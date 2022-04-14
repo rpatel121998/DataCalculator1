@@ -9,6 +9,7 @@
       "DataCalculatorWebAppServer/1.0.0": {
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": "3.7.1",
+          "AWSSDK.Glue": "3.7.15.3",
           "AWSSDK.S3": "3.7.7.19",
           "BlazorInputFile": "0.2.0",
           "DataJuggler.Blazor.FileUpload": "6.0.1",
@@ -22,17 +23,17 @@
           "DataCalculatorWebAppServer.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.6.4": {
+      "AWSSDK.Core/3.7.10.1": {
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.6.4"
+            "fileVersion": "3.7.10.1"
           }
         }
       },
       "AWSSDK.Extensions.NETCore.Setup/3.7.1": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.6.4",
+          "AWSSDK.Core": "3.7.10.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
@@ -44,9 +45,20 @@
           }
         }
       },
+      "AWSSDK.Glue/3.7.15.3": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.10.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Glue.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.15.3"
+          }
+        }
+      },
       "AWSSDK.S3/3.7.7.19": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.6.4"
+          "AWSSDK.Core": "3.7.10.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.S3.dll": {
@@ -696,12 +708,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWSSDK.Core/3.7.6.4": {
+    "AWSSDK.Core/3.7.10.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0QJ0BzsYDOj8hDotth6vGVd/arA0vtOQgI0ovApAnEA5d9bsGpdS7NERPSrDyKL08xT3/pPGAex3OyvF8jNRLw==",
-      "path": "awssdk.core/3.7.6.4",
-      "hashPath": "awssdk.core.3.7.6.4.nupkg.sha512"
+      "sha512": "sha512-8dLeCWqy+OKBoHA0AzFH/h3xAo5LpZ7Nxmx47eBF4z9dMeQsYiss3G4Jrgzr2aiDiab03q4wBLaRUTTNpl9AXQ==",
+      "path": "awssdk.core/3.7.10.1",
+      "hashPath": "awssdk.core.3.7.10.1.nupkg.sha512"
     },
     "AWSSDK.Extensions.NETCore.Setup/3.7.1": {
       "type": "package",
@@ -709,6 +721,13 @@
       "sha512": "sha512-cm7D75uispA3h/WwMEQVBMmFPPFwRvFQz8fyLwJEB9uqWYfTOMrRTcynMxHnrdoMyQnfCjByRTzHuFgWELmB6Q==",
       "path": "awssdk.extensions.netcore.setup/3.7.1",
       "hashPath": "awssdk.extensions.netcore.setup.3.7.1.nupkg.sha512"
+    },
+    "AWSSDK.Glue/3.7.15.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-irPrjG0ug2YUzlBiB0IjH/qgcO5U+BAu9OkvOZ0qnN+J23KuwxG3EP/aoBcqO7lT5n0EgoTZ0yguR+vUOiy+MQ==",
+      "path": "awssdk.glue/3.7.15.3",
+      "hashPath": "awssdk.glue.3.7.15.3.nupkg.sha512"
     },
     "AWSSDK.S3/3.7.7.19": {
       "type": "package",
