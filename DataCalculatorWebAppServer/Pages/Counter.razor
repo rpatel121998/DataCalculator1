@@ -29,8 +29,6 @@
     <p>@message</p>
     <p>@message2</p>
     <p>@UploadTimeMessage</p>
-    <ul>@liObjects</ul>
-    <button class="btn btn-primary" type="submit" onclick="@ListObjects">List Files</button>
 </div>
 
 
@@ -46,8 +44,6 @@
     private string UploadTimeMessage;
 
     private string timeToUpload;
-
-    private string liObjects;
 
     private async void HandleValidSubmit()
     {
@@ -108,16 +104,6 @@
             {
                 message = "Error: A Null file exists";
             }
-        }
-    }
-
-    public async void ListObjects()
-    {
-        List<S3Object> li = await _fileHandler.ListObjectAsync("seconddatacalc");
-        li.RemoveAt(0);
-        foreach(S3Object s3 in li)
-        {
-            liObjects += s3.Key + "end";
         }
     }
 }

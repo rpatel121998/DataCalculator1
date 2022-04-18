@@ -42,11 +42,11 @@ namespace DataCalculatorWebAppServer.Services
 
             return s3FileName;
         }
-        public async Task<TransferFile> DownloadFileAsync(string fileName)
+        public async Task<TransferFile> DownloadFileAsync(string fileName, string bucketName)
         {
             var request = new GetObjectRequest
             {
-                BucketName = _bucket,
+                BucketName = bucketName,
                 Key = fileName
             };
 

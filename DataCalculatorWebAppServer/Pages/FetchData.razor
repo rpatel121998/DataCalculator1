@@ -4,34 +4,55 @@
 @using Models
 @using Data
 @using Services
+@using Amazon
+@using Amazon.S3.Model
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
+
 <h1>Download file for query</h1>
-<p>Enter starting year</p>
-<input @bind="startDate">Enter starting year</input>
-<p>Enter end year</p>
-<input @bind="endDate">Enter final year</input>
-<button @onclick = "() => MetaDataQuery(startDate,endDate)" >Click to begin</button>
+<form>
+<label for = "startYear">Enter Start Year</label>
+<input @bind="startDate" id = "startYear"></input>
+<label for = "endYear">Enter end Year</label>
+<input @bind="endDate" id = "endYear"></input>
+<button class="btn btn-primary" type="submit" @onclick="() => DownloadGlue(startDate,endDate)">Download Glue Files</button>
+
+</form>
+
+<button class="btn btn-primary" type="submit" onclick="@ListObj">Download Glue Files</button>
+<p>@listObjects</p>
+
 
 
 @code{
+    public string listObjects;
     string startDate = "";
     string endDate = "";
+
+    public async void ListObj()
+    {
+        List<S3Object> li = await _fileHandler.ListObjectAsync("seconddatacalc");
+        li.RemoveAt(0);
+        foreach(S3Object s3 in li)
+        {
+            listObjects += s3.Key + " ";
+        }
+    }
 
     private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
     {
         Console.WriteLine(startingQueryDate + endingQueryDate);        
-        string[] fileNames = {"nvdcve-1.1-2019.json", "nvdcve-1.1-2021.json"};// Query MongoDb for all file names from start to end year and store in fileNames
-        DownloadFile(fileNames);
+        List<string> fileNames = new List<string>{"nvdcve-1.1-2019.json", "nvdcve-1.1-2021.json" };// Query MongoDb for all file names from start to end year and store in fileNames
+        DownloadFile(fileNames, "rawjsondatanvd");
     }
 
-    private async Task DownloadFile(string[] fileList)
+    private async Task DownloadFile(List<string> fileList, string bucketName)
     {
-        foreach(var fiName in fileList)
+        foreach(string fiName in fileList)
         {
-            var file = await _fileHandler.DownloadFileAsync(fiName);
-           SaveData(file);
+            var file = await _fileHandler.DownloadFileAsync(fiName, bucketName);
+            SaveData(file);
         }
     }
 
@@ -54,5 +75,26 @@
 
         return true;
     }
-    
+
+    public async void DownloadGlue(string startDate, string endDate)
+    {
+        // int fileCount = Int32.Parse(endDate) - Int32.Parse(startDate);
+
+        List<string> glueFileNames = new List<string>();
+
+        List<S3Object> s3ObjectList = await _fileHandler.ListObjectAsync("seconddatacalc");
+        s3ObjectList.RemoveAt(0);
+
+        foreach(S3Object s3 in s3ObjectList)
+        {
+            listObjects += s3.Key;
+            glueFileNames.Add(s3.Key);
+            Console.WriteLine(s3.Key);
+        }
+        foreach (string item in glueFileNames)
+        {
+            Console.WriteLine(item);
+        }
+        DownloadFile(glueFileNames, "seconddatacalc");
+    }
 }

@@ -9,7 +9,7 @@ namespace DataCalculatorWebAppServer.Services
     {
         Task UploadFileAsync(FileSendData fileSendData);
 
-        Task<TransferFile> DownloadFileAsync(string fileName);
+        Task<TransferFile> DownloadFileAsync(string fileName, string bucketName);
 
         Task<List<S3Object>> ListObjectAsync(string bucketName);
     }
