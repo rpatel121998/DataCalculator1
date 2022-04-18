@@ -18,7 +18,7 @@ namespace DataCalculatorWebAppServer.Services
         public AwsS3FileManager(IAmazonS3 client)
         {
             _client = client;
-            _bucket = "rawjsondatanvd";
+            _bucket = "seconddatacalc";
         }
 
         public async Task<string> UploadFileAsync(string fileName, Stream file)
