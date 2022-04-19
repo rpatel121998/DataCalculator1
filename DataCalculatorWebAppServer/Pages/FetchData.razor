@@ -17,7 +17,6 @@
 <label for = "endYear">Enter end Year</label>
 <input @bind="endDate" id = "endYear"></input>
 <button class="btn btn-primary" type="submit" @onclick="() => DownloadGlue(startDate,endDate)">Download Glue Files</button>
-
 </form>
 
 <button class="btn btn-primary" type="submit" onclick="@ListObj">Download Glue Files</button>
@@ -89,12 +88,10 @@
         {
             listObjects += s3.Key;
             glueFileNames.Add(s3.Key);
-            Console.WriteLine(s3.Key);
         }
-        foreach (string item in glueFileNames)
-        {
-            Console.WriteLine(item);
-        }
-        DownloadFile(glueFileNames, "seconddatacalc");
+
+        glueFileNames = glueFileNames.Select(s => s.Remove(0, 6)).ToList();
+
+        DownloadFile(glueFileNames, "seconddatacalc/write");
     }
 }
