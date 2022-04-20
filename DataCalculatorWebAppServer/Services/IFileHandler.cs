@@ -7,7 +7,7 @@ namespace DataCalculatorWebAppServer.Services
 {
     public interface IFileHandler
     {
-        Task UploadFileAsync(FileSendData fileSendData);
+        Task UploadFileAsync(FileSendData fileSendData, string bucketName);
 
         Task<TransferFile> DownloadFileAsync(string fileName, string bucketName);
 

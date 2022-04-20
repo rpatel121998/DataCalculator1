@@ -16,10 +16,10 @@
 <input @bind="startDate" id = "startYear"></input>
 <label for = "endYear">Enter end Year</label>
 <input @bind="endDate" id = "endYear"></input>
-<button class="btn btn-primary" type="submit" @onclick="() => DownloadGlue(startDate,endDate)">Download Glue Files</button>
+<button class="btn btn-primary" type="submit" @onclick="() => ValidateYears()">TESTBUTTON</button>
 </form>
 
-<button class="btn btn-primary" type="submit" onclick="@ListObj">Download Glue Files</button>
+<button class="btn btn-primary" type="submit" @onclick="() => ListObj(startDate,endDate)">Download Glue Files</button>
 <p>@listObjects</p>
 
 
@@ -29,14 +29,51 @@
     string startDate = "";
     string endDate = "";
 
-    public async void ListObj()
+    private async void ValidateYears()
     {
         List<S3Object> li = await _fileHandler.ListObjectAsync("seconddatacalc");
         li.RemoveAt(0);
+        List<string> glueFileNames = new List<string>();
         foreach(S3Object s3 in li)
         {
-            listObjects += s3.Key + " ";
+            glueFileNames.Add(s3.Key);
         }
+
+    }
+
+
+
+
+
+
+
+    public async void ListObj(string startDate, string endDate)
+    {
+        string fileName;
+        int queriedYear;
+        int startDateInt = Int32.Parse(startDate);
+        int endDateInt = Int32.Parse(endDate);
+        List<string> glueFileNames = new List<string>();
+
+        List<S3Object> li = await _fileHandler.ListObjectAsync("seconddatacalc");
+        li.RemoveAt(0);
+
+        foreach(S3Object s3 in li)
+        {
+            fileName = s3.Key;
+            listObjects += fileName;
+            string fileYear = fileName.Substring(13, 4);
+            queriedYear = Int32.Parse(fileYear);
+            if(queriedYear >= startDateInt && queriedYear <= endDateInt)
+            {
+                glueFileNames.Add(s3.Key);
+            }
+            else
+            {
+                
+            }
+        }
+        DownloadGlue(glueFileNames);
     }
 
     private void MetaDataQuery(string startingQueryDate, string endingQueryDate )
@@ -75,23 +112,38 @@
         return true;
     }
 
-    public async void DownloadGlue(string startDate, string endDate)
+    protected bool SaveData(TransferFile byteFile, string fileKey)
     {
-        // int fileCount = Int32.Parse(endDate) - Int32.Parse(startDate);
+        BinaryWriter Writer = null;
+        string Name = $@"C:.\Downloads\{fileKey}";
 
-        List<string> glueFileNames = new List<string>();
-
-        List<S3Object> s3ObjectList = await _fileHandler.ListObjectAsync("seconddatacalc");
-        s3ObjectList.RemoveAt(0);
-
-        foreach(S3Object s3 in s3ObjectList)
+        try
         {
-            listObjects += s3.Key;
-            glueFileNames.Add(s3.Key);
+            Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));              
+            Writer.Write(byteFile.Content);
+            Writer.Flush();
+            Writer.Close();
+        }
+        catch 
+        {
+            return false;
         }
 
-        glueFileNames = glueFileNames.Select(s => s.Remove(0, 6)).ToList();
+        return true;
+    }
 
-        DownloadFile(glueFileNames, "seconddatacalc/write");
+    public async void DownloadGlue(List<string> glueFileNames)
+    {
+        string keyName;
+
+        glueFileNames = glueFileNames.Select(s => s.Remove(0, 6)).ToList();
+        foreach(string file in glueFileNames)
+        {
+            keyName = file.Substring(0, 11);
+            string fi = file.Remove(0, 12);
+            var savedFile = await _fileHandler.DownloadFileAsync(fi, $"seconddatacalc/write/{keyName}");
+            SaveData(savedFile, keyName);
+
+        }
     }
 }

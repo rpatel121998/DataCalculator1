@@ -22,9 +22,9 @@ namespace DataCalculatorWebAppServer.Services
             _s3FileManager = s3FileManager;
         }
 
-        public async Task UploadFileAsync(FileSendData fileSendData)
+        public async Task UploadFileAsync(FileSendData fileSendData, string bucketName)
         {
-            var s3fileName = await _s3FileManager.UploadFileAsync(fileSendData.File.Name, fileSendData.File.Data);
+            var s3fileName = await _s3FileManager.UploadFileAsync(fileSendData.File.Name, fileSendData.File.Data, bucketName);
             await _context.SaveChangesAsync();
         }
 

@@ -21,7 +21,7 @@ namespace DataCalculatorWebAppServer.Services
             _bucket = "seconddatacalc";
         }
 
-        public async Task<string> UploadFileAsync(string fileName, Stream file)
+        public async Task<string> UploadFileAsync(string fileName, Stream file, string bucketName)
         {
             var filestream = new MemoryStream();
             await file.CopyToAsync(filestream);
@@ -32,7 +32,7 @@ namespace DataCalculatorWebAppServer.Services
             {
                 ContentType = "application/json",
                 InputStream = filestream,
-                BucketName = _bucket,
+                BucketName = bucketName,
                 Key = s3FileName
             };
             transferRequest.Metadata.Add("x-amz-meta-title", fileName);
@@ -78,9 +78,8 @@ namespace DataCalculatorWebAppServer.Services
                 BucketName = bucketName,
                 Prefix = "write/"
             };
-             var response = await _client.ListObjectsV2Async(request);
-             return response.S3Objects;
+            var response = await _client.ListObjectsV2Async(request);
+            return response.S3Objects;
         }
-
     }
 }
