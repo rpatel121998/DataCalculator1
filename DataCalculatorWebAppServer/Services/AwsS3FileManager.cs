@@ -13,12 +13,10 @@ namespace DataCalculatorWebAppServer.Services
     public class AwsS3FileManager : IAwsS3FileManager 
     {
         private readonly IAmazonS3 _client;
-        private readonly string _bucket;
 
         public AwsS3FileManager(IAmazonS3 client)
         {
             _client = client;
-            _bucket = "seconddatacalc";
         }
 
         public async Task<string> UploadFileAsync(string fileName, Stream file, string bucketName)

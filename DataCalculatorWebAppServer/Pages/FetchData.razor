@@ -16,7 +16,6 @@
 <input @bind="startDate" id = "startYear"></input>
 <label for = "endYear">Enter end Year</label>
 <input @bind="endDate" id = "endYear"></input>
-<button class="btn btn-primary" type="submit" @onclick="() => ValidateYears()">TESTBUTTON</button>
 </form>
 
 <button class="btn btn-primary" type="submit" @onclick="() => ListObj(startDate,endDate)">Download Glue Files</button>
@@ -28,24 +27,6 @@
     public string listObjects;
     string startDate = "";
     string endDate = "";
-
-    private async void ValidateYears()
-    {
-        List<S3Object> li = await _fileHandler.ListObjectAsync("seconddatacalc");
-        li.RemoveAt(0);
-        List<string> glueFileNames = new List<string>();
-        foreach(S3Object s3 in li)
-        {
-            glueFileNames.Add(s3.Key);
-        }
-
-    }
-
-
-
-
-
-
 
     public async void ListObj(string startDate, string endDate)
     {
@@ -70,7 +51,7 @@
             }
             else
             {
-                
+
             }
         }
         DownloadGlue(glueFileNames);
@@ -115,8 +96,9 @@
     protected bool SaveData(TransferFile byteFile, string fileKey)
     {
         BinaryWriter Writer = null;
-        string Name = $@"C:.\Downloads\{fileKey}";
-
+        string Name = $@"C:.\Downloads\";
+        byteFile.Name = fileKey.Replace("id=CVE", "nvdcve");
+        byteFile.Name = byteFile.Name + ".json";
         try
         {
             Writer = new BinaryWriter(File.OpenWrite(Name + byteFile.Name));              
@@ -131,6 +113,7 @@
 
         return true;
     }
+
 
     public async void DownloadGlue(List<string> glueFileNames)
     {
