@@ -50,6 +50,8 @@
 
     private async void HandleValidSubmit()
     {
+
+        List<string> fileYears = new List<string>();
         if (data.Count != 0)
         {
             bool etlCheck = false;
@@ -60,12 +62,13 @@
             stopwatch.Start();
             foreach (FileSendData datum in data)
             {
-                etlCheck = false;
                 _md_context.UploadMetaData(datum);
                 await _fileHandler.UploadFileAsync(datum, "seconddatacalc/read");
-                etlCheck = await ifExists(datum.Year);
+                fileYears.Add(datum.Year);
             }
-            
+            string lastYear = fileYears.Last();
+            etlCheck = await ifExists(lastYear);
+
             if (etlCheck)
             {
                 stopwatch.Stop();
@@ -91,7 +94,6 @@
     private void HandleFileUpload(IFileListEntry[] file)
     {
         Random rnd = new Random();
-        List<string> fileYears = new List<string>();
 
         for (int i = 0; i < file.Length; i++)
         {
@@ -107,7 +109,6 @@
                 data[i].Size = data[i].File.Size;
                 data[i].Date = data[i].File.LastModified;
                 data[i].Year = data[i].GetYear();
-                fileYears.Add(data[i].Year);
                 data[i].Path = data[i].File.RelativePath;
             }
             else
