@@ -1,0 +1,61 @@
+﻿@inject IJSRuntime JSRuntime
+
+
+<canvas id="@Id"></canvas>
+
+@code {
+    public enum ChartType
+    {
+        Pie,
+        Bar
+    }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public ChartType Type {get; set;}
+
+    [Parameter]
+    public string[] Data {get; set;}
+
+    [Parameter]
+    public string BackgroundColor {get; set;}
+
+    [Parameter]
+    public string[] Labels {get; set;}
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var config = new
+        {
+            Type = Type.ToString().ToLower(),
+            Options = new
+            {
+                Responsive = true,
+                Scales = new
+                {
+                    YAxes = new[]
+                    {
+                        new {
+                            Ticks = new {
+                                BeginAtZero = true
+                            }
+                        }
+                    }
+                }
+            },
+            Data = new
+            {
+                Datasets = new[]
+                {
+                    new { Data = Data, BackgroundColor = BackgroundColor, Label = "Vulnerability Frequency" }
+                },
+                Labels = Labels
+            }
+        };
+
+        await JSRuntime.InvokeVoidAsync("setup", Id, config);
+    }
+
+}
