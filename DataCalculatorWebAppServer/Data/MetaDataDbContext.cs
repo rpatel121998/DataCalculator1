@@ -35,10 +35,14 @@ namespace DataCalculatorWebAppServer.Data
 
         }
 
-        public void UploadMetricsMetaData(DateTime start, DateTime end, string name, long size)
+        public void UploadMetricsMetaData(DateTime start, DateTime end, string name, long size, string stateBucket)
         {
             var database = dbclient.GetDatabase("NDVData");
             var collection = database.GetCollection<BsonDocument>("Test2");
+            if (stateBucket != "rawjsondatanvd")
+            {
+                collection = database.GetCollection<BsonDocument>("Test4");
+            }
 
             BsonDateTime startTime = new BsonDateTime(start);
             BsonDateTime endTime = new BsonDateTime(end);
@@ -55,10 +59,15 @@ namespace DataCalculatorWebAppServer.Data
             collection.InsertOne(document);
         }
 
-        public void QueryMetricsMetaData(DateTime start, DateTime end, string name)
+        public void QueryMetricsMetaData(DateTime start, DateTime end, string name, string stateBucket)
         {
             var database = dbclient.GetDatabase("NDVData");
             var collection = database.GetCollection<BsonDocument>("Test3");
+
+            if (stateBucket != "rawjsondatanvd")
+            {
+                collection = database.GetCollection<BsonDocument>("Test5");
+            }
 
             BsonDateTime startTime = new BsonDateTime(start);
             BsonDateTime endTime = new BsonDateTime(end);

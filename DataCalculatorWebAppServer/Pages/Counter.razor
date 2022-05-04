@@ -53,54 +53,17 @@
             <thead>
                 <tr>
                     <th>File Name</th>
+                    <th>File Size (in Bytes)</th>
                     <th>Current Upload Time</th>
                     <th>Previous Upload Time</th>
                 </tr>
             </thead>
             <tbody>
-
           @for (int i = 0; i < data.Count; i++) 
           {
                    <tr>
                         <td>@data[i].FileName</td>
-                        <td>@currentUploadTimes[i]</td>
-                        <td>@uploadTimeHistory[i]</td>
-                   </tr>
-          }
-                
-            </tbody>
-        </table>
-      }
-      </div>
-
-      <div class="form-child">
-          <EditForm Model=@data OnValidSubmit=@HandleValidSubmit>
-        <div class="form-group">
-            <h4>AWS Glue</h4>
-        </div>
-        <button class="btn btn-primary" type="submit">Upload file(s)</button>
-        <p>@GlueMessage</p>
-        <p>@GlueMessage2</p>
-        <p>@gUploadTimeMessage</p>
-        <p>@gTotalFileSize</p>
-      </EditForm>
-      @if(g_state == 1)
-      {
-        <h4>Upload History</h4>
-        <table class='table'>
-            <thead>
-                <tr>
-                    <th>File Name</th>
-                    <th>Current Upload Time</th>
-                    <th>Previous Upload Time</th>
-                </tr>
-            </thead>
-            <tbody>
-
-          @for (int i = 0; i < data.Count; i++) 
-          {
-                   <tr>
-                        <td>@data[i].FileName</td>
+                        <td>@data[i].Size</td>
                         <td>@currentUploadTimes[i]</td>
                         <td>@uploadTimeHistory[i]</td>
                    </tr>
@@ -110,6 +73,47 @@
         </table>
 
         <button class="btn btn-primary" @onclick="onClick">Query Now</button>
+      }
+      </div>
+
+      <div class="form-child">
+          <EditForm Model=@data OnValidSubmit=@HandleValidSubmitGlue>
+        <div class="form-group">
+            <h4>AWS Glue</h4>
+        </div>
+        <button class="btn btn-primary" type="submit">Upload file(s)</button>
+        <p>@GlueMessage</p>
+        <p>@GlueMessage2</p>
+        <p>@GlueMessage3</p>
+        <p>@gUploadTimeMessage</p>
+        <p>@gTotalFileSizeMessage</p>
+      </EditForm>
+      @if(g_state == 1)
+      {
+        <h4>Upload History</h4>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>File Size (in Bytes)</th>
+                    <th>Current Upload Time</th>
+                    <th>Previous Upload Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+          @for (int i = 0; i < data.Count; i++) 
+          {
+                   <tr>
+                        <td>@data[i].FileName</td>
+                        <td>@data[i].Size</td>
+                        <td>@gCurrentUploadTimes[i]</td>
+                        <td>@gUploadTimeHistory[i]</td>
+                   </tr>
+          }
+                
+            </tbody>
+        </table>
         <button class="btn btn-primary" @onclick="onClickGlue">Query Now</button>
       }
       </div>

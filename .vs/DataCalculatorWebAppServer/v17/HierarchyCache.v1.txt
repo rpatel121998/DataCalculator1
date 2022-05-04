@@ -3,11 +3,13 @@ i:{00000000-0000-0000-0000-000000000000}:DataCalculatorWebAppServer.sln
 ++DataCalculatorWebAppServer
 i:{00000000-0000-0000-0000-000000000000}:DataCalculatorWebAppServer
 ++Connected Services 
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>397
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>505
 ++Dependencies
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>396
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>504
 ++Properties
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\properties\
+++launchSettings.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\properties\launchsettings.json
 ++wwwroot
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\
 ++css
@@ -19,6 +21,19 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\open-iconic\
 ++site.css
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\site.css
+++lib
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\
+++Chart.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\
+++chart.esm.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\chart.esm.js
+++chart.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\chart.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\chart.js
+++chart.min.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\chart.min.js
+++helpers.esm.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\helpers.esm.js
 ++favicon.ico
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\favicon.ico
 ++Data
@@ -27,6 +42,26 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\data\datacalculatordbcontext.cs
 ++MetaDataDbContext.cs
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\data\metadatadbcontext.cs
+++Downloads
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\
+++nvdcve-1.1-2017.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2017.json
+++nvdcve-1.1-2018.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2018.json
+++nvdcve-1.1-2019.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2019.json
+++nvdcve-1.1-2020.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2020.json
+++nvdcve-1.1-2021.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2021.json
+++nvdcve-2016.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-2016.json
+++nvdcve-2017.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-2017.json
+++nvdcve-2018.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-2018.json
+++nvdcve-2019.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-2019.json
 ++Migrations
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\migrations\
 ++Models
@@ -45,14 +80,26 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\_layout.cshtml
 ++Counter.razor
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\counter.razor
+++Counter.razor.cs
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\counter.razor.cs
+++Counter.razor.css
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\counter.razor.css
 ++Error.cshtml
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\error.cshtml
 ++Error.cshtml.cs
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\error.cshtml.cs
 ++FetchData.razor
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\fetchdata.razor
+++FetchData.razor.cs
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\fetchdata.razor.cs
+++FetchData.razor.css
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\fetchdata.razor.css
 ++Index.razor
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\pages\index.razor
+++Parser
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\parser\
+++DataParser.cs
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\parser\dataparser.cs
 ++Services
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\services\
 ++AwsS3FileManager.cs
@@ -77,17 +124,18 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\app.razor
 ++appsettings.json
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\appsettings.json
+++libman.json
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\libman.json
 ++Program.cs
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\program.cs
 ++No service dependencies discovered
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>506
 ++Analyzers
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:analyzers
 ++Frameworks
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:frameworks
 ++Packages
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:packages
-++launchSettings.json
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\properties\launchsettings.json
 ++bootstrap.min.css
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\bootstrap\bootstrap.min.css
 ++font
@@ -98,6 +146,10 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\open-iconic\icon-license
 ++README.md
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\open-iconic\readme.md
+++chart.esm.min.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\chart.esm.min.js
+++helpers.esm.min.js
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\lib\chart.js\helpers.esm.min.js
 ++MainLayout.razor.css
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\shared\mainlayout.razor.css
 ++NavMenu.razor.css
@@ -105,53 +157,65 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 ++appsettings.Development.json
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\appsettings.development.json
 ++AWSSDK.S3.CodeAnalysis
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\.nuget\packages\awssdk.s3\3.7.7.19\analyzers\dotnet\cs\awssdk.s3.codeanalysis.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\.nuget\packages\awssdk.s3\3.7.8.19\analyzers\dotnet\cs\awssdk.s3.codeanalysis.dll
 ++Microsoft.AspNetCore.Analyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
 ++Microsoft.AspNetCore.App.Analyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
 ++Microsoft.AspNetCore.App.CodeFixes
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
 ++Microsoft.AspNetCore.Components.Analyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
 ++Microsoft.AspNetCore.Mvc.Analyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
-++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
 ++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 ++Microsoft.CodeAnalysis.NetAnalyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.EntityFrameworkCore.Analyzers
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.Extensions.Logging.Generators
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++Microsoft.NET.Sdk.Razor.SourceGenerators
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
 ++System.Text.Json.SourceGeneration
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 ++Microsoft.AspNetCore.App
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\microsoft.aspnetcore.app
 ++Microsoft.NETCore.App
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\microsoft.netcore.app
-++AWSSDK.Extensions.NETCore.Setup (3.7.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>446
-++AWSSDK.S3 (3.7.7.19)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>442
+++AWSSDK.Extensions.NETCore.Setup (3.7.2)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>520
+++AWSSDK.S3 (3.7.8.19)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>523
 ++BlazorInputFile (0.2.0)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>439
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>529
+++C1.Blazor.Chart (6.0.20221.211)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>526
 ++DataJuggler.Blazor.FileUpload (6.0.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>444
-++Microsoft.EntityFrameworkCore (6.0.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>447
-++Microsoft.EntityFrameworkCore.SqlServer (6.0.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>443
-++Microsoft.EntityFrameworkCore.Tools (6.0.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>445
-++MongoDB.Bson (2.14.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>440
-++MongoDB.Driver (2.14.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>441
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>528
+++Microsoft.EntityFrameworkCore (6.0.4)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>518
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.4)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>519
+++Microsoft.EntityFrameworkCore.Tools (6.0.4)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>525
+++MongoDB.Bson (2.15.0)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>531
+++MongoDB.Driver (2.15.0)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>522
+++Newtonsoft.Json (13.0.1)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>521
+++Radzen.Blazor (3.18.2)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>524
+++Syncfusion.Blazor (20.1.0.48)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>530
+++Syncfusion.Blazor.SplitButtons (20.1.0.48)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>517
+++System.Net.Http.Json (6.0.0)
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:>527
 ++bootstrap.min.css.map
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\bootstrap\bootstrap.min.css.map
 ++fonts
@@ -168,32 +232,10 @@ i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf
 ++open-iconic.woff
 i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\wwwroot\css\open-iconic\font\fonts\open-iconic.woff
-++Downloads
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\
 ++NewFolder
-++Parser
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\parser\
-++DataParser.cs
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\parser\dataparser.cs
-++Newtonsoft.Json (13.0.1)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>453
-++C1.Blazor.Chart (6.0.20213.154)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>454
-++System.Net.Http.Json (6.0.0)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>463
-++SignalR
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>476
-++Your application is making use of SignalR. For environments that need to scale we strongly recommend adding a dependency on Azure SignalR Service.
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>477
-++SQL Server Database (ConnectionStrings:DataCalculatorDb)
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>474
-++SQL Server Database dependency with connectionId 'ConnectionStrings:DataCalculatorDb' is detected
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:>475
-++nvdcve-1.1-2019.json
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2019.json
-++nvdcve-1.1-2021.json
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2021.json
-++nvdcve-1.1-2017.json
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2017.json
-++nvdcve-1.1-2018.json
-i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\downloads\nvdcve-1.1-2018.json
+++Components
+++Chart.razor
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\chart\chart.razor
+++Chart
+i:{3ccb818a-0b1c-4857-991c-910c84857154}:c:\users\aj_ch\documents\college\csci 4712\datacalculatorwebappserver\datacalculatorwebappserver\chart\
+++chart.razor

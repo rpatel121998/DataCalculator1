@@ -6,19 +6,26 @@
 }
 */
 
-.query-field[b-2x654hknpn] {
+#query-field[b-2x654hknpn] {
     width: auto;
     padding: 20px;
     border: 3px solid #fff;
 }
 
-.query-field-child[b-2x654hknpn] {
+#query-form-child[b-2x654hknpn] {
     width: 50%;
     float: left;
     padding: 20px;
     border: 10px;
 }
 
-.query-field-child:nth-child(2)[b-2x654hknpn] {
-    float: right;
+#chart[b-2x654hknpn] 
+{
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+

@@ -4,62 +4,103 @@
 @using Models
 @using Data
 @using Services
-@using C1.Chart
-@using C1.Blazor.Chart
 @using Parser
 @using MongoDB.Bson
 @using MongoDB.Driver
 @using System.Diagnostics
+@using Microsoft.JSInterop
 
 @inject DataCalculatorDbContext _context 
 @inject IFileHandler _fileHandler
 @inject MetaDataDbContext _md_context
+@inject IJSRuntime JS
 
-<h1>Query Data</h1>
+<h3>Query Data</h3>
+
+@*<Chart Id="bar1" 
+       Type="@Chart.ChartType.Bar" 
+       Data="@(new[] { "10", "9"})"
+       BackgroundColor="yellow"
+       Labels = "@(new[] {"Fail", "Ok"})"></Chart> *@
 
 <div id="query-field">
-    <div id="query-field-child">
+    <span id="year-field">
+            <label>
+                Enter start year:
+                <input id="year-input" @bind="startDate">
+            </label>
+     </span>
+     <span id="year-field">
+            <label>
+                 Enter end year:
+                 <input id ="year-input" @bind="endDate">
+            </label>
+           
+     </span>
+</div>
+
+@if (c_state == 1)
+{
+            int i = 0;
+            List<string> label_data = new List<string>();
+            List<string> q_data = new List<string>();
+            
+            foreach (List<string[]> display in displays)
+            {
+                //newChart();
+                q_data.Clear();
+                label_data.Clear();
+
+                Random rnd = new Random();
+                int ind_num = rnd.Next(501);
+                string id_num = "bar" + ind_num.ToString();
+
+                for (int k = 0; k < display.Count; k++)
+                {
+
+                    q_data.Add(display[k][0].ToString());
+                    label_data.Add(display[k][1].ToString());
+
+                }
+
+                if (i == fileNames.Count)
+                {
+                    break;
+                }
+                string yr = GetYear(i);
+                
+                string m_content = $"Top Vulnerabilties in {yr}";
+                <div id="chart">
+                <h5>@m_content</h5>
+                    <Chart Id="@id_num"
+                       Type="@Chart.ChartType.Bar"
+                       Data="@label_data.ToArray()"
+                       BackgroundColor = "Purple"
+                       Labels="@q_data.ToArray()"></Chart>
+                </div>
+                i++;
+                //newChart();
+
+            }
+}
+
+<div id="query-form">
+    <div id="query-form-child">
         <h4>Paradise</h4>
-        <div id="year-field">
-            <p>Enter starting year:</p>
-            <input @bind="startDate">Enter starting year</input>
-        </div>
-        <p></p>
-        <div id="year-field">
-            <p>Enter end year:</p>
-            <input @bind="endDate">Enter final year</input>
-        </div>
-        <button class="btn btn-primary" @onclick= "() => MetaDataQuery(startDate, endDate)">Query Data</button>
+        <button class="btn btn-primary" id="queryButton" @onclick= "() => MetaDataQuery(startDate, endDate, bucketParadise)">Query Data</button>
         <p>@message</p>
         <p>@QueryTimeMessage</p>
         <p>@QuerySizeMessage</p>
         @if (state == 1)
         {
-            int i = 0;
-    
-            foreach (List<object> display in displays)
-            {
-                string yr = GetYear(i);
-                string m_content = $"Top Vulnerabilties in {yr}";
-                    <FlexChart Class="chart" ChartType="ChartType.Column"
-                    HeaderContent=@m_content HeaderStyle="font-size:24px"
-                    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
-                    BindingX="name" ItemsSource="display">
-                        <SeriesCollection>
-                            <Series Name="count" Binding="count" />
-                        </SeriesCollection>
-                        <Label>
-                            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
-                        </Label>
-                    </FlexChart>
-                    i++;
-            }
+           
 
-              <h4>Query History</h4>
+         <h4>Query History</h4>
          <table class='table'>
             <thead>
                 <tr>
                     <th>File Name</th>
+                    <th>File Size (in Bytes)</th>
                     <th>Current Query Time</th>
                     <th>Previous Query Time</th>
                 </tr>
@@ -70,8 +111,75 @@
             {
                     <tr>
                             <td>@fileNames[j]</td>
+                            <td>@fileSizes[j]</td>
                             <td>@currentQueryTimes[j]</td>
                             <td>@queryTimeHistory[j]</td>
+                    </tr>
+            }
+                
+            </tbody>
+        </table>
+        }
+    </div>
+    <div id="query-form-child">
+        <h4>AWS Glue</h4>
+        <button class="btn btn-primary" id="queryButton" @onclick= "() => MetaDataQuery(startDate, endDate, bucketGlue)">Query Data</button>
+        <p>@g_message</p>
+        <p>@g_QueryTimeMessage</p>
+        <p>@g_QuerySizeMessage</p>
+        @if (g_state == 1)
+        {
+@*            int i = 0;
+            List<string> label_data = new List<string>();
+            List<string> q_data = new List<string>();
+            
+            foreach (List<string[]> display in g_Displays)
+            {
+                q_data.Clear();
+                label_data.Clear();
+
+                Random rnd = new Random();
+                int ind_num = rnd.Next(502, 1001);
+                string id_num = "bar" + ind_num.ToString();
+
+                for (int k = 0; k < display.Count; k++)
+                {
+
+                    q_data.Add(display[k][0].ToString());
+                    label_data.Add(display[k][1].ToString());
+
+                }
+                string yr = GetYear(i);
+                string m_content = $"Top Vulnerabilties in {yr}";
+                <h5>@m_content</h5>
+                <Chart Id="@id_num"
+                       Type="@Chart.ChartType.Bar"
+                       Data="@label_data.ToArray()"
+                       BackgroundColor = "Purple"
+                       Labels="@q_data.ToArray()"></Chart>
+                i++;
+
+            }*@
+
+              <h4>Query History</h4>
+         <table class='table'>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>File Size (in Bytes)</th>
+                    <th>Current Query Time</th>
+                    <th>Previous Query Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            @for (int j = 0; j < fileNames.Count; j++) 
+            {
+                    <tr>
+                            <td>@fileNames[j]</td>
+                            <td>@fileSizes[j]</td>
+                            <td>@g_currentQueryTimes[j]</td>
+                            <td>@g_QueryTimeHistory[j]</td>
                     </tr>
             }
                 
@@ -80,46 +188,8 @@
 
         }
     </div>
-    <div id="query-field-child">
-        <h4>Glue</h4>
-        <div id="year-field">
-            <p>Enter starting year:</p>
-            <input @bind="g_startDate">Enter starting year</input>
-        </div>
-        <p></p>
-        <div id="year-field">
-            <p>Enter end year:</p>
-            <input @bind="g_endDate">Enter final year</input>
-        </div>
-        <button class="btn btn-primary" @onclick= "() => MetaDataQuery(startDate, endDate)">Query Data</button>
-        <p>@g_message</p>
-        <p>@g_QueryTimeMessage</p>
-        <p>@g_QuerySizeMessage</p>
-        @if (g_state == 1)
-        {
-            int i = 0;
-    
-            foreach (List<object> display in displays)
-            {
-                string yr = GetYear(i);
-                string m_content = $"Top Vulnerabilties in {yr}";
-                    <FlexChart Class="chart" ChartType="ChartType.Column"
-                    HeaderContent=@m_content HeaderStyle="font-size:24px"
-                    LegendPosition="Position.Bottom" LegendStyle="font-size:18px"
-                    BindingX="name" ItemsSource="display">
-                        <SeriesCollection>
-                            <Series Name="count" Binding="count" />
-                        </SeriesCollection>
-                        <Label>
-                            <DataLabel Position="LabelPosition.Top" Content="{value}"/>
-                        </Label>
-                    </FlexChart>
-                    i++;
-            }
-
-        }
-    </div>
   
 </div>
+
 
     

@@ -50,15 +50,11 @@
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[3.7.8.7, )"
+              "version": "[3.7.8.19, )"
             },
             "BlazorInputFile": {
               "target": "Package",
               "version": "[0.2.0, )"
-            },
-            "C1.Blazor.Chart": {
-              "target": "Package",
-              "version": "[6.0.20213.154, )"
             },
             "DataJuggler.Blazor.FileUpload": {
               "target": "Package",
@@ -66,17 +62,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "MongoDB.Bson": {
               "target": "Package",
@@ -92,15 +88,15 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[3.16.6, )"
+              "version": "[3.18.2, )"
             },
             "Syncfusion.Blazor": {
               "target": "Package",
-              "version": "[19.4.0.55, )"
+              "version": "[20.1.0.48, )"
             },
             "Syncfusion.Blazor.SplitButtons": {
               "target": "Package",
-              "version": "[19.4.0.55, )"
+              "version": "[20.1.0.48, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",

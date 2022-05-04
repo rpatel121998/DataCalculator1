@@ -14,24 +14,19 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.themes\19.4.0.55\buildTransitive\Syncfusion.Blazor.Themes.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.themes\19.4.0.55\buildTransitive\Syncfusion.Blazor.Themes.props')" />
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.core\19.4.0.55\buildTransitive\Syncfusion.Blazor.Core.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.core\19.4.0.55\buildTransitive\Syncfusion.Blazor.Core.props')" />
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.spinner\19.4.0.55\buildTransitive\Syncfusion.Blazor.Spinner.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.spinner\19.4.0.55\buildTransitive\Syncfusion.Blazor.Spinner.props')" />
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.popups\19.4.0.55\buildTransitive\Syncfusion.Blazor.Popups.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.popups\19.4.0.55\buildTransitive\Syncfusion.Blazor.Popups.props')" />
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.splitbuttons\19.4.0.55\buildTransitive\Syncfusion.Blazor.SplitButtons.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.splitbuttons\19.4.0.55\buildTransitive\Syncfusion.Blazor.SplitButtons.props')" />
-    <Import Project="$(NuGetPackageRoot)syncfusion.blazor\19.4.0.55\buildTransitive\Syncfusion.Blazor.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor\19.4.0.55\buildTransitive\Syncfusion.Blazor.props')" />
-    <Import Project="$(NuGetPackageRoot)radzen.blazor\3.16.6\buildTransitive\Radzen.Blazor.props" Condition="Exists('$(NuGetPackageRoot)radzen.blazor\3.16.6\buildTransitive\Radzen.Blazor.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.typescript.msbuild\4.0.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(NuGetPackageRoot)microsoft.typescript.msbuild\4.0.2\build\Microsoft.TypeScript.MSBuild.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.3\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.3\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.core\20.1.0.48\buildTransitive\Syncfusion.Blazor.Core.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.core\20.1.0.48\buildTransitive\Syncfusion.Blazor.Core.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.spinner\20.1.0.48\buildTransitive\Syncfusion.Blazor.Spinner.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.spinner\20.1.0.48\buildTransitive\Syncfusion.Blazor.Spinner.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.popups\20.1.0.48\buildTransitive\Syncfusion.Blazor.Popups.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.popups\20.1.0.48\buildTransitive\Syncfusion.Blazor.Popups.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.splitbuttons\20.1.0.48\buildTransitive\Syncfusion.Blazor.SplitButtons.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.splitbuttons\20.1.0.48\buildTransitive\Syncfusion.Blazor.SplitButtons.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor\20.1.0.48\buildTransitive\Syncfusion.Blazor.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor\20.1.0.48\buildTransitive\Syncfusion.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)radzen.blazor\3.18.2\buildTransitive\Radzen.Blazor.props" Condition="Exists('$(NuGetPackageRoot)radzen.blazor\3.18.2\buildTransitive\Radzen.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.4\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.4\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
     <Import Project="$(NuGetPackageRoot)datajuggler.blazor.fileupload\6.0.1\buildTransitive\DataJuggler.Blazor.FileUpload.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.fileupload\6.0.1\buildTransitive\DataJuggler.Blazor.FileUpload.props')" />
-    <Import Project="$(NuGetPackageRoot)c1.blazor.core\6.0.20213.154\build\C1.Blazor.Core.props" Condition="Exists('$(NuGetPackageRoot)c1.blazor.core\6.0.20213.154\build\C1.Blazor.Core.props')" />
-    <Import Project="$(NuGetPackageRoot)c1.blazor.chart\6.0.20213.154\build\C1.Blazor.Chart.props" Condition="Exists('$(NuGetPackageRoot)c1.blazor.chart\6.0.20213.154\build\C1.Blazor.Chart.props')" />
     <Import Project="$(NuGetPackageRoot)blazorinputfile\0.2.0\buildTransitive\BlazorInputFile.props" Condition="Exists('$(NuGetPackageRoot)blazorinputfile\0.2.0\buildTransitive\BlazorInputFile.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_TypeScript_MSBuild Condition=" '$(PkgMicrosoft_TypeScript_MSBuild)' == '' ">C:\Users\aj_ch\.nuget\packages\microsoft.typescript.msbuild\4.0.2</PkgMicrosoft_TypeScript_MSBuild>
-    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\aj_ch\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.3</PkgMicrosoft_EntityFrameworkCore_Tools>
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\aj_ch\.nuget\packages\awssdk.core\3.7.8.9</PkgAWSSDK_Core>
-    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\aj_ch\.nuget\packages\awssdk.s3\3.7.8.7</PkgAWSSDK_S3>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\aj_ch\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.4</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\aj_ch\.nuget\packages\awssdk.core\3.7.10.7</PkgAWSSDK_Core>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\aj_ch\.nuget\packages\awssdk.s3\3.7.8.19</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>

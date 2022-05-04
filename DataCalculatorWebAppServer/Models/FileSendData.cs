@@ -27,8 +27,9 @@ namespace DataCalculatorWebAppServer.Models
         {
             char[] delimiterChars = { '-' };
             string[] fileNameArray = FileName.Split(delimiterChars);
-            fileNameArray = fileNameArray[2].Split('.');
-            return fileNameArray[0];
+            fileNameArray = fileNameArray[1].Split('.');
+            string year = fileNameArray[0];
+            return year;
         }
     }
 

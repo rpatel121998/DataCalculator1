@@ -13,23 +13,15 @@ namespace DataCalculatorWebAppServer.Services
     public class AwsS3FileManager : IAwsS3FileManager 
     {
         private readonly IAmazonS3 _client;
-        private readonly string _bucket;
+        // private readonly string _bucket;
 
-        /*
-         *  public AwsS3FileManager(IAmazonS3 client, string bucket)
-            {
-                _client = client;
-                _bucket = "rawjsondatanvd";
-            }
-         */
         public AwsS3FileManager(IAmazonS3 client)
         {
             _client = client;
             //_bucket = bucket;
-            _bucket = "rawjsondatanvd";
         }
 
-        public async Task<string> UploadFileAsync(string fileName, Stream file)
+        public async Task<string> UploadFileAsync(string fileName, Stream file, string bucketName)
         {
             var filestream = new MemoryStream();
             await file.CopyToAsync(filestream);
@@ -40,7 +32,7 @@ namespace DataCalculatorWebAppServer.Services
             {
                 ContentType = "application/json",
                 InputStream = filestream,
-                BucketName = _bucket,
+                BucketName = bucketName,
                 Key = s3FileName
             };
             transferRequest.Metadata.Add("x-amz-meta-title", fileName);
@@ -50,11 +42,11 @@ namespace DataCalculatorWebAppServer.Services
 
             return s3FileName;
         }
-        public async Task<TransferFile> DownloadFileAsync(string fileName)
+        public async Task<TransferFile> DownloadFileAsync(string fileName, string bucketName)
         {
             var request = new GetObjectRequest
             {
-                BucketName = _bucket,
+                BucketName = bucketName,
                 Key = fileName
             };
 
@@ -77,6 +69,17 @@ namespace DataCalculatorWebAppServer.Services
                     };
                 }
             }
+        }
+
+        public async Task<List<S3Object>> ListObjectAsync(string bucketName)
+        {
+            var request = new ListObjectsV2Request
+            {
+                BucketName = bucketName,
+                Prefix = "write/"
+            };
+            var response = await _client.ListObjectsV2Async(request);
+            return response.S3Objects;
         }
     }
 }
