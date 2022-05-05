@@ -104,3 +104,9 @@ C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalcul
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\obj\Debug\net6.0\scopedcss\Pages\FetchData.razor.rz.scp.css
 C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\libman.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\paradiseDownloads\nvdcve-2015.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\glueDownloads\nvdcve-2014.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\glueDownloads\nvdcve-2015.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\glueDownloads\nvdcve-2016.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\paradiseDownloads\nvdcve-2014.json
+C:\Users\aj_ch\Documents\College\CSCI 4712\DataCalculatorWebAppServer\DataCalculatorWebAppServer\bin\Debug\net6.0\Downloads\paradiseDownloads\nvdcve-2016.json

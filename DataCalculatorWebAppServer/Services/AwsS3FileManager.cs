@@ -9,12 +9,18 @@ using DataCalculatorWebAppServer.Models;
 
 namespace DataCalculatorWebAppServer.Services
 {
+
     // The actual controller where the S3 upload happens
     public class AwsS3FileManager : IAwsS3FileManager 
     {
+        
         private readonly IAmazonS3 _client;
         // private readonly string _bucket;
+        //MemoryStream fileCopy = new MemoryStream();
+        //MemoryStream fileCopy2 = new MemoryStream();
+        //MemoryStream fileCopy3 = new MemoryStream();
 
+        Dictionary<string, MemoryStream> savedFiles = new Dictionary<string, MemoryStream>();
         public AwsS3FileManager(IAmazonS3 client)
         {
             _client = client;
@@ -23,8 +29,33 @@ namespace DataCalculatorWebAppServer.Services
 
         public async Task<string> UploadFileAsync(string fileName, Stream file, string bucketName)
         {
-            var filestream = new MemoryStream();
-            await file.CopyToAsync(filestream);
+            //if (filestream.Length > 0)
+            //{
+            //    filestream = new MemoryStream();
+            //}
+
+            //if (file.Position > 0)
+            //{
+            //    try
+            //    {
+            //        file.Position = (long)0;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex.Message);
+            //    }
+            //}
+            MemoryStream filestream = new MemoryStream();
+
+            if (file.Position == 0)
+            {
+                MemoryStream memoryStream = new MemoryStream();
+                await file.CopyToAsync(memoryStream);
+                savedFiles.Add(fileName, memoryStream);
+                savedFiles[fileName].Position = 0;
+            }
+
+            await savedFiles[fileName].CopyToAsync(filestream);
 
             var s3FileName = $"{fileName}";
 
@@ -40,7 +71,13 @@ namespace DataCalculatorWebAppServer.Services
             var fileTransferUtility = new TransferUtility(_client);
             await fileTransferUtility.UploadAsync(transferRequest);
 
-            filestream.Close();
+            //long len = 0;
+            //fileCopyStream.Position = 0;   
+
+            if (savedFiles[fileName].CanSeek)
+            {
+                savedFiles[fileName].Position = 0;
+            }
 
             return s3FileName;
         }
