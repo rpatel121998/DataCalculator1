@@ -40,6 +40,8 @@ namespace DataCalculatorWebAppServer.Services
             var fileTransferUtility = new TransferUtility(_client);
             await fileTransferUtility.UploadAsync(transferRequest);
 
+            filestream.Close();
+
             return s3FileName;
         }
         public async Task<TransferFile> DownloadFileAsync(string fileName, string bucketName)
